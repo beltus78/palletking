@@ -73,6 +73,10 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+			boxShadow: {
+				'business': '0 4px 20px hsl(var(--primary) / 0.15)',
+				'card': '0 2px 10px hsl(215 25% 27% / 0.1)'
+			},
 			keyframes: {
 				'accordion-down': {
 					from: {
