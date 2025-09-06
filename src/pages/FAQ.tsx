@@ -1,0 +1,238 @@
+import Header from "@/components/Header";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Search, HelpCircle, Phone, Mail } from "lucide-react";
+import { useState } from "react";
+
+const faqData = [
+  {
+    category: "Getting Started",
+    questions: [
+      {
+        question: "How do I start buying liquidation pallets?",
+        answer: "To start buying liquidation pallets, browse our shop section, select the pallets you're interested in, and add them to your cart. You can purchase individual pallets or contact us for bulk pricing on truckload quantities. We recommend starting with smaller quantities to understand the merchandise before scaling up."
+      },
+      {
+        question: "What types of merchandise do you offer?",
+        answer: "We offer a wide variety of liquidation merchandise including shoes, clothing, electronics, beauty products, baby items, household goods, paper products, and more. All our pallets contain customer returns, surplus inventory, shelf pulls, and overstock from major US retailers."
+      },
+      {
+        question: "Do I need a business license to purchase?",
+        answer: "While not always required for individual purchases, we recommend having a business license for tax purposes and to establish wholesale relationships. For bulk orders and truckload purchases, a business license is typically required."
+      }
+    ]
+  },
+  {
+    category: "Pricing & Payment",
+    questions: [
+      {
+        question: "How is pallet pricing determined?",
+        answer: "Pallet pricing is based on the type of merchandise, retail value, condition, and quantity. We offer competitive wholesale pricing with better discounts for bulk purchases. Truckload quantities receive the best per-pallet pricing."
+      },
+      {
+        question: "What payment methods do you accept?",
+        answer: "We accept multiple payment methods including credit cards, bank wire transfers, Apple Pay, Bitcoin, and we also offer line of credit options for qualified customers. Payment is typically required before shipment."
+      },
+      {
+        question: "Are there additional fees?",
+        answer: "Our listed prices include the pallet cost. Additional fees may include shipping, insurance, and any special handling requirements. We provide transparent pricing with no hidden fees."
+      }
+    ]
+  },
+  {
+    category: "Shipping & Logistics",
+    questions: [
+      {
+        question: "How much does shipping cost?",
+        answer: "Shipping costs vary based on location, pallet size, weight, and quantity. We offer competitive shipping rates and can arrange freight shipping for large orders. You can also arrange your own shipping or pick up pallets in person."
+      },
+      {
+        question: "How long does shipping take?",
+        answer: "Standard shipping typically takes 3-7 business days within the continental US. Freight shipments for larger orders may take 5-10 business days. We provide tracking information for all shipments."
+      },
+      {
+        question: "Can I pick up pallets in person?",
+        answer: "Yes, you can arrange to pick up pallets at our Florida location. This saves on shipping costs and allows you to inspect pallets before taking them. Please schedule pickup appointments in advance."
+      }
+    ]
+  },
+  {
+    category: "Merchandise Quality",
+    questions: [
+      {
+        question: "What condition is the merchandise in?",
+        answer: "Our merchandise consists of customer returns, surplus inventory, shelf pulls, and overstock. Condition varies and may include new, like-new, and items with minor defects. Each pallet listing includes condition details."
+      },
+      {
+        question: "Can I see what's in a pallet before buying?",
+        answer: "We provide general descriptions and categories for each pallet, but specific item lists are not available as pallets contain mixed merchandise. This is part of the liquidation model that allows for low pricing."
+      },
+      {
+        question: "Do you offer any guarantees?",
+        answer: "While we cannot guarantee specific items or conditions due to the nature of liquidation merchandise, we stand behind our descriptions and work to ensure customer satisfaction. We're transparent about what to expect from our pallets."
+      }
+    ]
+  },
+  {
+    category: "Business Support",
+    questions: [
+      {
+        question: "Do you offer volume discounts?",
+        answer: "Yes, we offer progressive discounts for larger quantities. Truckload purchases receive the best pricing. Contact our sales team for custom quotes on bulk orders and ongoing supply agreements."
+      },
+      {
+        question: "Can you help with business guidance?",
+        answer: "Our experienced team can provide guidance on getting started in the liquidation business, including advice on profitable product categories, pricing strategies, and market insights. We want our customers to succeed."
+      },
+      {
+        question: "Do you have a distribution agreement?",
+        answer: "Some pallets may require a distribution agreement, which will be clearly noted in the product listing. This helps ensure proper distribution channels and protects brand integrity."
+      }
+    ]
+  }
+];
+
+const FAQ = () => {
+  const [searchTerm, setSearchTerm] = useState("");
+  
+  const filteredFAQs = faqData.map(category => ({
+    ...category,
+    questions: category.questions.filter(
+      q => 
+        q.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        q.answer.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+  })).filter(category => category.questions.length > 0);
+
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-primary to-primary-dark py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
+            Frequently Asked Questions
+          </h1>
+          <p className="text-xl text-white/90 mb-8">
+            Find answers to common questions about our liquidation pallets
+          </p>
+          
+          {/* Search */}
+          <div className="max-w-md mx-auto relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+            <Input
+              placeholder="Search FAQs..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-10 bg-white"
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Content */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            {filteredFAQs.length === 0 ? (
+              <div className="text-center py-12">
+                <HelpCircle className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
+                <h3 className="text-xl font-semibold mb-2">No results found</h3>
+                <p className="text-muted-foreground">
+                  Try adjusting your search terms or browse all categories below.
+                </p>
+              </div>
+            ) : (
+              <div className="space-y-8">
+                {filteredFAQs.map((category, categoryIndex) => (
+                  <div key={categoryIndex}>
+                    <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                      <HelpCircle className="h-6 w-6 text-primary" />
+                      {category.category}
+                    </h2>
+                    
+                    <Accordion type="single" collapsible className="space-y-4">
+                      {category.questions.map((faq, faqIndex) => (
+                        <AccordionItem 
+                          key={`${categoryIndex}-${faqIndex}`} 
+                          value={`${categoryIndex}-${faqIndex}`}
+                          className="border rounded-lg px-6"
+                        >
+                          <AccordionTrigger className="text-left hover:no-underline py-6">
+                            <span className="font-semibold">{faq.question}</span>
+                          </AccordionTrigger>
+                          <AccordionContent className="pb-6 text-muted-foreground">
+                            {faq.answer}
+                          </AccordionContent>
+                        </AccordionItem>
+                      ))}
+                    </Accordion>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Support */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card>
+              <CardHeader className="text-center">
+                <CardTitle className="text-2xl">Still Have Questions?</CardTitle>
+                <p className="text-muted-foreground">
+                  Our customer support team is here to help you with any additional questions
+                </p>
+              </CardHeader>
+              <CardContent>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="text-center p-6 border rounded-lg">
+                    <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Call Us</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Speak directly with our team
+                    </p>
+                    <Button variant="outline" size="sm">
+                      +1(541)-515-7780
+                    </Button>
+                  </div>
+                  
+                  <div className="text-center p-6 border rounded-lg">
+                    <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
+                    <h3 className="font-semibold mb-2">Email Us</h3>
+                    <p className="text-muted-foreground mb-4">
+                      Get detailed answers via email
+                    </p>
+                    <Button variant="outline" size="sm">
+                      Send Message
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Links */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-2xl font-bold mb-8">Quick Links</h2>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button variant="outline">Shop Pallets</Button>
+            <Button variant="outline">About Us</Button>
+            <Button variant="outline">Contact Us</Button>
+            <Button variant="outline">Privacy Policy</Button>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FAQ;
