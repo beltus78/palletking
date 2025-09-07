@@ -13,9 +13,6 @@ const Header = () => {
       <div className="bg-[#1e3a8a] text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <span className="flex items-center">
-              Phone: +1(541)-515-7780
-            </span>
           </div>
           <div className="flex items-center space-x-6">
             <Link to="/contact" className="hover:text-orange-400 transition-colors">CONTACT US</Link>
