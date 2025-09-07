@@ -20,10 +20,10 @@ const SaleProducts = () => {
       discount: 20,
       description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class",
       images: [
-        { url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop", alt: "Adidas sneakers front view", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", alt: "Adidas sneakers side view", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop", alt: "Adidas sneakers back view", angle: "Back View" },
-        { url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop", alt: "Adidas sneakers detail", angle: "Detail View" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.54.23-600x600.jpeg.webp", alt: "Adidas sneakers front view", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.52.48-600x600.jpeg.webp", alt: "Adidas sneakers side view", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.54.23-600x600.jpeg.webp", alt: "Adidas sneakers back view", angle: "Back View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.52.48-600x600.jpeg.webp", alt: "Adidas sneakers detail", angle: "Detail View" }
       ],
       isFeatured: true,
       status: "Available",
@@ -42,9 +42,9 @@ const SaleProducts = () => {
       discount: 33,
       description: "Step Into a New Level of Comfort and Style with Ultra-Lightweight, Breathable Footwear",
       images: [
-        { url: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop", alt: "Cloud Walker front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop", alt: "Cloud Walker side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=400&fit=crop", alt: "Cloud Walker back", angle: "Back View" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM.jpeg", alt: "Cloud Walker front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM-1.jpeg", alt: "Cloud Walker side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM.jpeg", alt: "Cloud Walker back", angle: "Back View" }
       ],
       isFeatured: true,
       status: "New",
@@ -63,9 +63,9 @@ const SaleProducts = () => {
       discount: 17,
       description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. $1000 a pallet which contains 100 pairs",
       images: [
-        { url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", alt: "Hoka Clifton front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop", alt: "Hoka Clifton side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop", alt: "Hoka Clifton back", angle: "Back View" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.16-PM.jpeg", alt: "Hoka Clifton front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.18-PM.jpeg", alt: "Hoka Clifton side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.16-PM.jpeg", alt: "Hoka Clifton back", angle: "Back View" }
       ],
       isFeatured: true,
       status: "Available",
@@ -83,9 +83,9 @@ const SaleProducts = () => {
       discount: 0,
       description: "Premium Stanley Cup merchandise pallets for resale. 50 cups per pallet",
       images: [
-        { url: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop", alt: "Stanley Cup front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop", alt: "Stanley Cup side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1549298916-acc8b4bc8b4e?w=400&h=400&fit=crop", alt: "Stanley Cup colors", angle: "Color Options" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup colors", angle: "Color Options" }
       ],
       isFeatured: false,
       status: "Available",

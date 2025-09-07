@@ -37,9 +37,9 @@ const AllForGarden = () => {
       discount: 33,
       description: "Step Into a New Level of Comfort and Style with Ultra-Lightweight, Breathable Footwear",
       images: [
-        { url: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop", alt: "Cloud Walker front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop", alt: "Cloud Walker side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=400&fit=crop", alt: "Cloud Walker back", angle: "Back View" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM.jpeg", alt: "Cloud Walker front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM-1.jpeg", alt: "Cloud Walker side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM.jpeg", alt: "Cloud Walker back", angle: "Back View" }
       ],
       isFeatured: true,
       status: "New",
@@ -58,9 +58,9 @@ const AllForGarden = () => {
       discount: 17,
       description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. $1000 a pallet which contains 100 pairs",
       images: [
-        { url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", alt: "Hoka Clifton front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop", alt: "Hoka Clifton side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop", alt: "Hoka Clifton back", angle: "Back View" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.16-PM.jpeg", alt: "Hoka Clifton front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.18-PM.jpeg", alt: "Hoka Clifton side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.16-PM.jpeg", alt: "Hoka Clifton back", angle: "Back View" }
       ],
       isFeatured: true,
       status: "Available",
@@ -78,9 +78,9 @@ const AllForGarden = () => {
       discount: 0,
       description: "50 cups per pallet",
       images: [
-        { url: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop", alt: "Stanley Cup front", angle: "Front View" },
-        { url: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop", alt: "Stanley Cup side", angle: "Side View" },
-        { url: "https://images.unsplash.com/photo-1549298916-acc8b4bc8b4e?w=400&h=400&fit=crop", alt: "Stanley Cup colors", angle: "Color Options" }
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup front", angle: "Front View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup side", angle: "Side View" },
+        { url: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg", alt: "Stanley Cup colors", angle: "Color Options" }
       ],
       isFeatured: false,
       status: "Available",
