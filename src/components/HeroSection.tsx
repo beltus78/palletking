@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-warehouse.jpg";
 
 const HeroSection = () => {
@@ -24,12 +25,16 @@ const HeroSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="btn-hero text-lg px-8 py-6">
-              VIEW MORE
-            </Button>
-            <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6">
-              CONTACT US
-            </Button>
+            <Link to="/shop">
+              <Button className="btn-hero text-lg px-8 py-6">
+                VIEW MORE
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-primary text-lg px-8 py-6">
+                CONTACT US
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Link } from "react-router-dom";
 
 const ProductCategories = () => {
   return (
@@ -49,12 +50,16 @@ const ProductCategories = () => {
               </ul>
               
               <div className="flex gap-4 mt-8">
-                <Button className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
-                  SHOP
-                </Button>
-                <Button variant="outline" className="btn-outline-business">
-                  FAQS
-                </Button>
+                <Link to="/shop">
+                  <Button className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
+                    SHOP
+                  </Button>
+                </Link>
+                <Link to="/faq">
+                  <Button variant="outline" className="btn-outline-business">
+                    FAQS
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
@@ -71,12 +76,16 @@ const ProductCategories = () => {
               </p>
               
               <div className="flex gap-4">
-                <Button className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
-                  ABOUT US
-                </Button>
-                <Button className="btn-hero">
-                  TO SHOP
-                </Button>
+                <Link to="/about">
+                  <Button className="bg-primary hover:bg-primary-dark text-primary-foreground px-8 py-3">
+                    ABOUT US
+                  </Button>
+                </Link>
+                <Link to="/shop">
+                  <Button className="btn-hero">
+                    TO SHOP
+                  </Button>
+                </Link>
               </div>
             </CardContent>
           </Card>
