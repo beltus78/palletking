@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import heroImage from "@/assets/hero-warehouse.jpg";
 import majorRetailerLogo from "@/assets/logos/major-retailer.png";
 import lowesLogo from "@/assets/logos/lowes-original.png";
 import samsClubLogo from "@/assets/logos/samsclub-original.png";
@@ -62,7 +61,7 @@ const StoreOverstock = () => {
             <div className="lg:col-span-1">
               <div className="sticky top-8">
                 <img 
-                  src={heroImage} 
+                  src="/lovable-uploads/4f88d31d-7371-4696-b7d4-38d54826425a.png" 
                   alt="Warehouse with liquidation pallets and overstock merchandise" 
                   className="w-full h-auto min-h-[500px] object-cover rounded-xl shadow-2xl"
                   loading="lazy"
