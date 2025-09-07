@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ChevronLeft, ChevronRight, Heart, Mail, ShoppingCart } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/contexts/CartContext";
 
 interface ShopProductImage {
   url: string;
@@ -45,6 +46,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
     product.variations?.[0] || null
   );
   const { toast } = useToast();
+  const { addToCart: addToCartContext } = useCart();
 
   // Create default images if not provided
   const productImages = product.images || [
@@ -81,6 +83,13 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
   };
 
   const addToCart = () => {
+    addToCartContext({
+      id: product.id,
+      name: product.name,
+      price: selectedVariation?.price || product.salePrice,
+      image: productImages[0]?.url || product.image,
+      category: product.category,
+    });
     toast({
       title: "Added to Cart",
       description: `${product.name} has been added to your cart.`,

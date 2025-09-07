@@ -8,6 +8,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ShopProductGallery from "@/components/ShopProductGallery";
 import { useToast } from "@/hooks/use-toast";
+import { useCart } from "@/contexts/CartContext";
 
 interface Product {
   id: number;
@@ -504,8 +505,16 @@ const Shop = () => {
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const { toast } = useToast();
+  const { addToCart } = useCart();
 
-  const addToCart = (product: Product) => {
+  const handleAddToCart = (product: Product) => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.salePrice,
+      image: product.image,
+      category: product.category,
+    });
     toast({
       title: "Added to Cart",
       description: `${product.name} has been added to your cart.`,
@@ -735,7 +744,7 @@ const Shop = () => {
                       
                       <Button
                         className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-                        onClick={() => addToCart(product)}
+                        onClick={() => handleAddToCart(product)}
                       >
                         Add to cart
                       </Button>

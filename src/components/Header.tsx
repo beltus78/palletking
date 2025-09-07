@@ -4,9 +4,11 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
+import { useCart } from "@/contexts/CartContext";
 // Fallback logo will be used via onError handler
 
 const Header = () => {
+  const { getTotalItems, getTotalPrice } = useCart();
   return (
     <header role="banner">
       {/* Top Bar - Dark navy exactly like original */}
@@ -99,20 +101,20 @@ const Header = () => {
                 </Button>
               </div>
               
-              <div className="text-center">
+              <Link to="/cart" className="text-center">
                 <Button variant="ghost" className="flex flex-col items-center p-2 text-white hover:text-gray-200 relative">
                   <ShoppingCart className="h-5 w-5 mb-1" />
                   <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs bg-orange-500 border-0">
-                    0
+                    {getTotalItems()}
                   </Badge>
                   <span className="text-xs">Cart</span>
                 </Button>
-              </div>
+              </Link>
               
               <div className="text-center">
                 <div className="flex items-center">
-                  <span className="text-sm text-white">0 items/</span>
-                  <span className="text-lg font-bold text-white">$0.00</span>
+                  <span className="text-sm text-white">{getTotalItems()} items/</span>
+                  <span className="text-lg font-bold text-white">${getTotalPrice().toFixed(2)}</span>
                 </div>
               </div>
             </div>
