@@ -75,36 +75,6 @@ const Footer = () => {
         </div>
       </section>
 
-      {/* Retailer Partners Section */}
-      <section className="bg-white py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
-            Our Retail Partners & Sources
-          </h3>
-          <p className="text-center text-gray-600 mb-8">
-            We source liquidation pallets directly from top USA retailers
-          </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
-            {retailerLogos.map((retailer, index) => (
-              <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
-                <img
-                  src={retailer.logo}
-                  alt={`${retailer.name} logo`}
-                  className="h-8 w-auto max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                  onError={(e) => {
-                    if (retailer.fallback) {
-                      e.currentTarget.src = retailer.fallback;
-                    }
-                  }}
-                />
-              </div>
-            ))}
-          </div>
-          <p className="text-center text-gray-500 text-sm mt-6">
-            * We source from these and many other major retailers across the USA
-          </p>
-        </div>
-      </section>
 
       {/* Main Footer */}
       <div className="py-12">
