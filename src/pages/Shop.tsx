@@ -7,7 +7,7 @@ import { Grid, Grid3x3, LayoutGrid } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ShopProductGallery from "@/components/ShopProductGallery";
-import { useToast } from "@/components/ui/use-toast";
+import { useToast } from "@/hooks/use-toast";
 
 interface Product {
   id: number;
