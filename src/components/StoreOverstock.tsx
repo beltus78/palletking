@@ -1,9 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import majorRetailerLogo from "@/assets/logos/major-retailer.png";
-import lowesLogo from "@/assets/logos/lowes-original.png";
-import samsClubLogo from "@/assets/logos/samsclub-original.png";
-import walmartLogo from "@/assets/logos/walmart-original.png";
-import lenovoLogo from "@/assets/logos/lenovo-logo.png";
+// Use fallback SVG logos since assets might not exist
 
 const StoreOverstock = () => {
   return (
@@ -71,32 +67,32 @@ const StoreOverstock = () => {
           {/* Retailer Logos Section */}
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
             <img 
-              src={majorRetailerLogo} 
-              alt="Major Retailer Logo" 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23333333'%3EMajor Retailer%3C/text%3E%3C/svg%3E" 
+              alt="Major Retailer Logo"
               className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               loading="lazy"
             />
             <img 
-              src={lowesLogo} 
-              alt="Lowe's Logo" 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004990'%3ELowe's%3C/text%3E%3C/svg%3E" 
+              alt="Lowe's Logo"
               className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               loading="lazy"
             />
             <img 
-              src={samsClubLogo} 
-              alt="Sam's Club Logo" 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23004c91'%3ESam's Club%3C/text%3E%3C/svg%3E" 
+              alt="Sam's Club Logo"
               className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               loading="lazy"
             />
             <img 
-              src={walmartLogo} 
-              alt="Walmart Logo" 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004c91'%3EWalmart%3C/text%3E%3C/svg%3E" 
+              alt="Walmart Logo"
               className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               loading="lazy"
             />
             <img 
-              src={lenovoLogo} 
-              alt="Lenovo Logo" 
+              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='35' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23e2001a'%3ELenovo%3C/text%3E%3C/svg%3E" 
+              alt="Lenovo Logo"
               className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
               loading="lazy"
             />

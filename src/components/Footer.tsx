@@ -1,45 +1,39 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Package, Headphones, CreditCard, Truck } from "lucide-react";
-import logoOriginal from "@/assets/logo-original.png";
-import lenovoLogo from "@/assets/logos/lenovo-logo.png";
-import amazonLogo from "@/assets/logos/amazon-logo.png";
-import walmartLogo from "@/assets/logos/walmart-original.png";
-import lowesLogo from "@/assets/logos/lowes-original.png";
-import samsClubLogo from "@/assets/logos/samsclub-original.png";
-import majorRetailerLogo from "@/assets/logos/major-retailer.png";
+// Use fallback logos since assets might not exist
 
 const Footer = () => {
   // Retailer partner logos - exactly from your original website
   const retailerLogos = [
     {
       name: "Walmart",
-      logo: walmartLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004c91'%3EWalmart%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004c91'%3EWalmart%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Lowe's",
-      logo: lowesLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004990'%3ELowe's%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004990'%3ELowe's%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Sam's Club",
-      logo: samsClubLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23004c91'%3ESam's Club%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23004c91'%3ESam's Club%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Major Retailer",
-      logo: majorRetailerLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23333333'%3EMajor Retailer%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23333333'%3EMajor Retailer%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Amazon",
-      logo: amazonLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23ff9900'%3EAmazon%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23ff9900'%3EAmazon%3C/text%3E%3C/svg%3E"
     },
     {
       name: "Lenovo",
-      logo: lenovoLogo,
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='35' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23e2001a'%3ELenovo%3C/text%3E%3C/svg%3E",
       fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='35' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23e2001a'%3ELenovo%3C/text%3E%3C/svg%3E"
     },
     {
@@ -84,7 +78,7 @@ const Footer = () => {
             <div className="col-span-1 md:col-span-2">
               <Link to="/" className="flex items-center mb-6">
                 <img 
-                  src={logoOriginal} 
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='%23f59e0b'/%3E%3Ctext x='40' y='48' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EP%3C/text%3E%3Ctext x='85' y='25' fill='%23f59e0b' font-size='14' font-weight='bold'%3EPALLETS LIQUIDATION%3C/text%3E%3Ctext x='85' y='45' fill='%23f59e0b' font-size='14' font-weight='bold'%3ECENTER%3C/text%3E%3C/svg%3E" 
                   alt="My Pallet Liquidation Center" 
                   className="h-12 w-auto"
                   onError={(e) => {

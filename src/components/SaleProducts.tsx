@@ -84,7 +84,7 @@ const SaleProducts = () => {
       currentPrice: 300,
       discount: 40,
       description: "Transform your backyard into a summer paradise with a Inflatable Pool. Enjoy endless fun, relaxation, and memorable moments.",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop",
       isFeatured: false,
       status: "Available"
     },
@@ -95,7 +95,7 @@ const SaleProducts = () => {
       currentPrice: 800,
       discount: 20,
       description: "Looking for a reliable supplier of high-quality all good diapers pallets? 200 pieces per pallet",
-      image: "/placeholder.svg",
+      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=400&fit=crop",
       isFeatured: false,
       status: "Available"
     }

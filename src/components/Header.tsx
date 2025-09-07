@@ -4,7 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import logoOriginal from "@/assets/logo-original.png";
+// Fallback logo will be used via onError handler
 
 const Header = () => {
   return (
@@ -43,7 +43,7 @@ const Header = () => {
             {/* Logo - Using original logo */}
             <Link to="/" className="flex items-center">
               <img 
-                src={logoOriginal} 
+                src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='%23f59e0b'/%3E%3Ctext x='40' y='48' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EP%3C/text%3E%3Ctext x='85' y='25' fill='%23f59e0b' font-size='14' font-weight='bold'%3EPALLETS LIQUIDATION%3C/text%3E%3Ctext x='85' y='45' fill='%23f59e0b' font-size='14' font-weight='bold'%3ECENTER%3C/text%3E%3C/svg%3E" 
                 alt="My Pallet Liquidation Center" 
                 className="h-16 w-auto"
                 onError={(e) => {
