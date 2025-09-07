@@ -1,9 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import heroImage from "@/assets/hero-warehouse.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-[600px] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" role="banner">
+    <section className="relative min-h-[600px] text-white" role="banner">
+      {/* Background image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      ></div>
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
       
