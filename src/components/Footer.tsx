@@ -62,58 +62,16 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
-      {/* Feature Section - Matching original website */}
-      <section className="bg-gray-100 py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Package className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Hundreds Of Pallets In Stock
-              </h4>
-              <p className="text-gray-600">
-                No one rejects, No one dislikes.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Headphones className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                24/7 Support
-              </h4>
-              <p className="text-gray-600">
-                We are Available 24/7
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <CreditCard className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Online Payment
-              </h4>
-              <p className="text-gray-600">
-                Many Payment Methods
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Truck className="h-8 w-8 text-white" />
-              </div>
-              <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                Fast Delivery
-              </h4>
-              <p className="text-gray-600">
-                Always on time
-              </p>
-            </div>
-          </div>
+      {/* Centered Customer Support Section */}
+      <section className="bg-gradient-to-r from-orange-500 to-orange-600 py-8">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            First Class Customer Support & Service
+          </h3>
+          <p className="text-orange-100 text-lg max-w-3xl mx-auto">
+            We are Available 24/7 to assist you with all your liquidation pallet needs. 
+            Call us now at +1(541)-515-7780 or email info@mypalletliquidationcenter.com
+          </p>
         </div>
       </section>
 
@@ -126,7 +84,7 @@ const Footer = () => {
           <p className="text-center text-gray-600 mb-8">
             We source liquidation pallets directly from top USA retailers
           </p>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
             {retailerLogos.map((retailer, index) => (
               <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
                 <img

@@ -1,4 +1,10 @@
 import { Card, CardContent } from "@/components/ui/card";
+import heroImage from "@/assets/hero-warehouse.jpg";
+import majorRetailerLogo from "@/assets/logos/major-retailer.png";
+import lowesLogo from "@/assets/logos/lowes-original.png";
+import samsClubLogo from "@/assets/logos/samsclub-original.png";
+import walmartLogo from "@/assets/logos/walmart-original.png";
+import lenovoLogo from "@/assets/logos/lenovo-logo.png";
 
 const StoreOverstock = () => {
   return (
@@ -9,9 +15,9 @@ const StoreOverstock = () => {
             Store Overstock
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
             {/* Content Section */}
-            <div className="space-y-8">
+            <div className="lg:col-span-2 space-y-8">
               <div>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   In the course of sales and market management, it can happen that the store has a large 
@@ -52,16 +58,16 @@ const StoreOverstock = () => {
               </Card>
             </div>
 
-            {/* Image Section */}
-            <div className="flex justify-center">
-              <img 
-                src="/src/assets/hero-warehouse.jpg" 
-                alt="Warehouse with liquidation pallets and overstock merchandise" 
-                className="rounded-lg shadow-lg max-w-full h-auto"
-                width="500"
-                height="600"
-                loading="lazy"
-              />
+            {/* Large Image Section */}
+            <div className="lg:col-span-1">
+              <div className="sticky top-8">
+                <img 
+                  src={heroImage} 
+                  alt="Warehouse with liquidation pallets and overstock merchandise" 
+                  className="w-full h-auto min-h-[500px] object-cover rounded-xl shadow-2xl"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
 
@@ -69,31 +75,31 @@ const StoreOverstock = () => {
           <div className="mt-16">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center justify-items-center opacity-60">
               <img 
-                src="/src/assets/logos/major-retailer.png" 
+                src={majorRetailerLogo} 
                 alt="Major Retailer Logo" 
                 className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />
               <img 
-                src="/src/assets/logos/lowes-original.png" 
+                src={lowesLogo} 
                 alt="Lowe's Logo" 
                 className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />
               <img 
-                src="/src/assets/logos/samsclub-original.png" 
+                src={samsClubLogo} 
                 alt="Sam's Club Logo" 
                 className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />
               <img 
-                src="/src/assets/logos/walmart-original.png" 
+                src={walmartLogo} 
                 alt="Walmart Logo" 
                 className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
               />
               <img 
-                src="/src/assets/logos/lenovo-logo.png" 
+                src={lenovoLogo} 
                 alt="Lenovo Logo" 
                 className="h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
                 loading="lazy"
@@ -101,56 +107,6 @@ const StoreOverstock = () => {
             </div>
           </div>
 
-          {/* Features Grid */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                </div>
-              </div>
-              <h4 className="text-lg font-semibold mb-2 text-foreground">Hundreds Of Pallets In Stock</h4>
-              <p className="text-muted-foreground text-sm">No one rejects, No one dislikes.</p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-              </div>
-              <h4 className="text-lg font-semibold mb-2 text-foreground">24/7 Support</h4>
-              <p className="text-muted-foreground text-sm">We are Available 24/7</p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
-                  </svg>
-                </div>
-              </div>
-              <h4 className="text-lg font-semibold mb-2 text-foreground">Online Payment</h4>
-              <p className="text-muted-foreground text-sm">Many Payment Methods</p>
-            </div>
-
-            <div className="text-center">
-              <div className="mb-4">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto">
-                  <svg className="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-              </div>
-              <h4 className="text-lg font-semibold mb-2 text-foreground">Fast Delivery</h4>
-              <p className="text-muted-foreground text-sm">Always on time</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
