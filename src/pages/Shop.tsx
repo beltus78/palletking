@@ -33,7 +33,7 @@ import diapersPallet from "@/assets/products/diapers-pallet.jpg";
 import diapersVariety1 from "@/assets/products/diapers-variety-1.jpg";
 import adidasSneakers from "@/assets/products/adidas-sneakers.jpg";
 import allstarVariety1 from "@/assets/products/allstar-variety-1.jpg";
-import toiletPaper from "@/assets/products/adidas-sneakers.jpg";
+import toiletPaper from "@/assets/products/diapers-pallet.jpg";
 import cloudWalkerNew from "@/assets/products/cloud-walker-new.jpg";
 import cloudWalkerVariety1 from "@/assets/products/cloud-walker-variety-1.jpg";
 import hokaNew from "@/assets/products/hoka-clifton-new.jpg";
@@ -239,7 +239,7 @@ const products: Product[] = [
     name: "Perfume Pallets",
     originalPrice: 1200,
     salePrice: 1000,
-    image: cloudWalkerShoes,
+    image: perfumeVariety1,
     description: "Premium fragrance collection from top brands. Luxurious scents for every personality and occasion.",
     category: "beauty",
     discount: 17,
@@ -247,7 +247,7 @@ const products: Product[] = [
     status: "Available",
     shippingMethod: "Standard shipping 2-4 business days, Gift wrapping available",
     images: [
-      { url: cloudWalkerShoes, alt: "Perfume Pallet", angle: "Product View" },
+      { url: perfumeVariety1, alt: "Perfume Pallet", angle: "Product View" },
       { url: perfumeVariety1, alt: "Perfume Collection", angle: "Variety View" }
     ]
   },
@@ -274,7 +274,7 @@ const products: Product[] = [
     name: "Christmas Decoration Pallets",
     originalPrice: 800,
     salePrice: 600,
-    image: sheinDress,
+    image: christmasVariety1,
     description: "Festive Christmas decorations and ornaments. Create magical holiday moments with premium decorative items.",
     category: "seasonal",
     discount: 25,
@@ -282,7 +282,7 @@ const products: Product[] = [
     status: "Available",
     shippingMethod: "Standard shipping 3-5 business days, Holiday express delivery available",
     images: [
-      { url: sheinDress, alt: "Christmas Decorations", angle: "Product View" },
+      { url: christmasVariety1, alt: "Christmas Decorations", angle: "Product View" },
       { url: christmasVariety1, alt: "Christmas Collection", angle: "Variety View" }
     ]
   },
