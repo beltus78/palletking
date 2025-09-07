@@ -20,20 +20,39 @@ interface Product {
   discount: number;
   quantity: string;
   status: string;
+  images?: { url: string; alt: string; angle: string }[];
 }
 
 import adidasSneakersPallet from "@/assets/products/adidas-sneakers-pallet.jpg";
+import adidasVariety1 from "@/assets/products/adidas-variety-1.jpg";
+import adidasVariety2 from "@/assets/products/adidas-variety-2.jpg";
 import inflatablePools from "@/assets/products/inflatable-pools.jpg";
+import poolsVariety1 from "@/assets/products/pools-variety-1.jpg";
 import diapersPallet from "@/assets/products/diapers-pallet.jpg";
+import diapersVariety1 from "@/assets/products/diapers-variety-1.jpg";
 import adidasSneakers from "@/assets/products/adidas-sneakers.jpg";
+import allstarVariety1 from "@/assets/products/allstar-variety-1.jpg";
 import toiletPaper from "@/assets/products/adidas-sneakers.jpg";
 import cloudWalkerNew from "@/assets/products/cloud-walker-new.jpg";
+import cloudWalkerVariety1 from "@/assets/products/cloud-walker-variety-1.jpg";
 import hokaNew from "@/assets/products/hoka-clifton-new.jpg";
+import hokaVariety1 from "@/assets/products/hoka-variety-1.jpg";
 import stanleyCupNew from "@/assets/products/stanley-cup-new.jpg";
+import stanleyVariety1 from "@/assets/products/stanley-variety-1.jpg";
+import stanleyVariety2 from "@/assets/products/stanley-variety-2.jpg";
 import sheinDress from "@/assets/products/shein-dress.jpg";
+import sheinVariety1 from "@/assets/products/shein-variety-1.jpg";
 import appleWatchNew from "@/assets/products/apple-watch-new.jpg";
+import appleWatchVariety1 from "@/assets/products/apple-watch-variety-1.jpg";
+import appleWatchVariety2 from "@/assets/products/apple-watch-variety-2.jpg";
 import cloudWalkerShoes from "@/assets/products/cloud-walker-shoes.jpg";
 import nikeBasketball from "@/assets/products/nike-basketball.jpg";
+import nikeVariety1 from "@/assets/products/nike-variety-1.jpg";
+import nikeVariety2 from "@/assets/products/nike-variety-2.jpg";
+import electronicsVariety1 from "@/assets/products/electronics-variety-1.jpg";
+import electronicsVariety2 from "@/assets/products/electronics-variety-2.jpg";
+import christmasVariety1 from "@/assets/products/christmas-variety-1.jpg";
+import perfumeVariety1 from "@/assets/products/perfume-variety-1.jpg";
 
 const products: Product[] = [
   {
@@ -46,7 +65,12 @@ const products: Product[] = [
     category: "shoes",
     discount: 20,
     quantity: "200 pairs per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: adidasSneakersPallet, alt: "Adidas Sneakers Pallet", angle: "Product View" },
+      { url: adidasVariety1, alt: "Adidas Collection", angle: "Variety View" },
+      { url: adidasVariety2, alt: "Adidas Details", angle: "Detail View" }
+    ]
   },
   {
     id: 2,
@@ -58,7 +82,11 @@ const products: Product[] = [
     category: "outdoor",
     discount: 40,
     quantity: "224 pallets available",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: inflatablePools, alt: "Inflatable Pools Pallet", angle: "Product View" },
+      { url: poolsVariety1, alt: "Pool Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 3,
@@ -70,7 +98,11 @@ const products: Product[] = [
     category: "baby",
     discount: 20,
     quantity: "200 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: diapersPallet, alt: "Diapers Pallet", angle: "Product View" },
+      { url: diapersVariety1, alt: "Diaper Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 4,
@@ -82,7 +114,11 @@ const products: Product[] = [
     category: "shoes",
     discount: 33,
     quantity: "100 pairs per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: adidasSneakers, alt: "All Star Shoes", angle: "Product View" },
+      { url: allstarVariety1, alt: "All Star Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 5,
@@ -106,7 +142,11 @@ const products: Product[] = [
     category: "shoes",
     discount: 33,
     quantity: "100 pairs per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: cloudWalkerNew, alt: "Cloud Walker Shoes", angle: "Product View" },
+      { url: cloudWalkerVariety1, alt: "Cloud Walker Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 7,
@@ -118,7 +158,11 @@ const products: Product[] = [
     category: "shoes",
     discount: 17,
     quantity: "100 pairs per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: hokaNew, alt: "Hoka Clifton Shoes", angle: "Product View" },
+      { url: hokaVariety1, alt: "Hoka Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 8,
@@ -130,7 +174,12 @@ const products: Product[] = [
     category: "accessories",
     discount: 0,
     quantity: "50 cups per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: stanleyCupNew, alt: "Stanley Cup Pallet", angle: "Product View" },
+      { url: stanleyVariety1, alt: "Stanley Cup Collection", angle: "Variety View" },
+      { url: stanleyVariety2, alt: "Stanley Cup Lifestyle", angle: "Lifestyle View" }
+    ]
   },
   {
     id: 9,
@@ -142,7 +191,11 @@ const products: Product[] = [
     category: "clothing",
     discount: 0,
     quantity: "200 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: sheinDress, alt: "Shein Dress", angle: "Product View" },
+      { url: sheinVariety1, alt: "Shein Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 10,
@@ -154,7 +207,12 @@ const products: Product[] = [
     category: "electronics",
     discount: 33,
     quantity: "100 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: appleWatchNew, alt: "Apple Watch Series 8", angle: "Product View" },
+      { url: appleWatchVariety1, alt: "Apple Watch Collection", angle: "Variety View" },
+      { url: appleWatchVariety2, alt: "Apple Watch Interface", angle: "Interface View" }
+    ]
   },
   {
     id: 11,
@@ -166,7 +224,11 @@ const products: Product[] = [
     category: "beauty",
     discount: 17,
     quantity: "200 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: cloudWalkerShoes, alt: "Perfume Pallet", angle: "Product View" },
+      { url: perfumeVariety1, alt: "Perfume Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 12,
@@ -178,7 +240,12 @@ const products: Product[] = [
     category: "shoes",
     discount: 20,
     quantity: "150 pairs per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: nikeBasketball, alt: "Nike Basketball Shoes", angle: "Product View" },
+      { url: nikeVariety1, alt: "Nike Collection", angle: "Variety View" },
+      { url: nikeVariety2, alt: "Nike Action", angle: "Action View" }
+    ]
   },
   {
     id: 13,
@@ -190,7 +257,11 @@ const products: Product[] = [
     category: "seasonal",
     discount: 25,
     quantity: "Mixed items per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: sheinDress, alt: "Christmas Decorations", angle: "Product View" },
+      { url: christmasVariety1, alt: "Christmas Collection", angle: "Variety View" }
+    ]
   },
   {
     id: 14,
@@ -202,7 +273,12 @@ const products: Product[] = [
     category: "electronics",
     discount: 25,
     quantity: "Mixed electronics per pallet",
-    status: "Available"
+    status: "Available",
+    images: [
+      { url: appleWatchNew, alt: "Electronics Pallet", angle: "Product View" },
+      { url: electronicsVariety1, alt: "Electronics Collection", angle: "Variety View" },
+      { url: electronicsVariety2, alt: "Electronics Details", angle: "Detail View" }
+    ]
   },
   {
     id: 15,

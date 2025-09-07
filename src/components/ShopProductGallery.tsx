@@ -29,6 +29,7 @@ interface ShopProduct {
   discount: number;
   quantity: string;
   status: string;
+  image?: string;
   images?: ShopProductImage[];
   variations?: ShopProductVariation[];
   availability?: string[];
