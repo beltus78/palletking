@@ -57,6 +57,9 @@ export default {
 				'hero-bg': 'hsl(var(--hero-bg))',
 				'business-gray': 'hsl(var(--business-gray))',
 				'light-gray': 'hsl(var(--light-gray))',
+				'navy-main': 'hsl(var(--navy-main))',
+				'orange-main': 'hsl(var(--orange-main))',
+				'orange-600': 'hsl(39 100% 55%)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

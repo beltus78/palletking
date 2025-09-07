@@ -9,68 +9,67 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 215 25% 27%;
+    --foreground: 0 0% 13%;
 
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 27%;
+    --card-foreground: 0 0% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 27%;
+    --popover-foreground: 0 0% 13%;
 
-    /* Navy Blue Primary Theme */
-    --primary: 215 85% 20%;
+    /* Exact color scheme from the original site */
+    --primary: 210 100% 12%; /* Dark navy blue header */
     --primary-foreground: 0 0% 100%;
-    --primary-dark: 215 85% 15%;
+    --primary-dark: 210 100% 8%;
 
-    /* Orange Accent */
-    --accent: 25 95% 53%;
+    /* Orange accent exactly matching the site */
+    --accent: 39 100% 60%; /* Orange from the original */
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 25 95% 48%;
+    --accent-hover: 39 100% 55%;
 
     --secondary: 210 20% 96%;
-    --secondary-foreground: 215 25% 27%;
+    --secondary-foreground: 0 0% 13%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 215 13% 50%;
+    --muted-foreground: 0 0% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 15% 85%;
-    --input: 215 15% 85%;
-    --ring: 215 85% 20%;
+    --border: 210 15% 85%;
+    --input: 210 15% 85%;
+    --ring: 210 100% 12%;
 
-    /* Custom Business Colors */
-    --hero-bg: 215 25% 12%;
-    --hero-overlay: 215 25% 12% / 0.8;
-    --business-gray: 215 10% 40%;
-    --light-gray: 215 15% 95%;
+    /* Custom colors matching the original site */
+    --hero-bg: 40 15% 25%; /* Brown hero background */
+    --hero-overlay: 40 15% 15% / 0.8;
+    --business-gray: 0 0% 45%;
+    --light-gray: 210 15% 97%;
+    --orange-main: 39 100% 60%; /* Main orange color */
+    --navy-main: 210 100% 12%; /* Main navy color */
 
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-bg)) 0%, hsl(var(--primary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--hero-bg)) 0%, hsl(var(--hero-bg)) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--accent-hover)));
 
     /* Shadows */
     --shadow-business: 0 4px 20px hsl(var(--primary) / 0.15);
-    --shadow-card: 0 2px 10px hsl(215 25% 27% / 0.1);
+    --shadow-card: 0 2px 10px hsl(0 0% 0% / 0.08);
 
-    --radius: 0.5rem;
+    --radius: 0.375rem;
+
+    /* Additional custom colors */
+    --navy-main: 210 100% 12%;
+    --orange-main: 39 100% 60%;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
