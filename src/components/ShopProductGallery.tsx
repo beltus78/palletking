@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Badge } from "@/components/ui/badge";
-import { ChevronLeft, ChevronRight, Heart, Mail, ShoppingCart } from "lucide-react";
+import { ChevronLeft, ChevronRight, Heart, Mail } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { useCart } from "@/contexts/CartContext";
 
 interface ShopProductImage {
   url: string;
@@ -46,7 +45,6 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
     product.variations?.[0] || null
   );
   const { toast } = useToast();
-  const { addToCart: addToCartContext } = useCart();
 
   // Create default images if not provided
   const productImages = product.images || [
@@ -82,17 +80,17 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
     });
   };
 
-  const addToCart = () => {
-    addToCartContext({
-      id: product.id,
-      name: product.name,
-      price: selectedVariation?.price || product.salePrice,
-      image: productImages[0]?.url || product.image,
-      category: product.category,
-    });
+  const sendEmailInquiry = () => {
+    const variation = selectedVariation ? ` (${selectedVariation.size || selectedVariation.color})` : '';
+    const subject = `Product Inquiry - ${product.name}${variation}`;
+    const body = `Hi, I'm interested in the following product:%0D%0A%0D%0AProduct: ${product.name}${variation}%0D%0APrice: $${selectedVariation?.price || product.salePrice}%0D%0ADescription: ${product.description}%0D%0A%0D%0APlease provide more information about availability and shipping details.%0D%0A%0D%0AThank you!`;
+    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Added to Cart",
-      description: `${product.name} has been added to your cart.`,
+      title: "Opening Email",
+      description: "Email client opening with product inquiry details.",
     });
   };
 
@@ -279,15 +277,15 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
                 Wishlist
               </Button>
               <Button 
-                onClick={addToCart}
+                onClick={sendEmailInquiry}
                 variant="outline" 
                 className="flex-1"
               >
-                <ShoppingCart className="h-4 w-4 mr-2" />
-                Add to Cart
+                <Mail className="h-4 w-4 mr-2" />
+                Email Inquiry
               </Button>
               <Button 
-                onClick={sendProductInquiry}
+                onClick={sendEmailInquiry}
                 className="flex-1"
               >
                 <Mail className="h-4 w-4 mr-2" />

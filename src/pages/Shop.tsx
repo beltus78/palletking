@@ -8,7 +8,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ShopProductGallery from "@/components/ShopProductGallery";
 import { useToast } from "@/hooks/use-toast";
-import { useCart } from "@/contexts/CartContext";
 
 interface Product {
   id: number;
@@ -505,19 +504,17 @@ const Shop = () => {
   const [itemsPerPage, setItemsPerPage] = useState(9);
   const [selectedCategory, setSelectedCategory] = useState("ALL");
   const { toast } = useToast();
-  const { addToCart } = useCart();
 
-  const handleAddToCart = (product: Product) => {
-    addToCart({
-      id: product.id,
-      name: product.name,
-      price: product.salePrice,
-      image: product.image,
-      category: product.category,
-    });
+  const handleEmailInquiry = (product: Product) => {
+    const subject = `Product Inquiry - ${product.name}`;
+    const body = `Hi, I'm interested in the following product:%0D%0A%0D%0AProduct: ${product.name}%0D%0APrice: $${product.salePrice.toLocaleString()}.00%0D%0ADescription: ${product.description}%0D%0A%0D%0APlease provide more information about availability and shipping details.%0D%0A%0D%0AThank you!`;
+    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    window.location.href = mailtoLink;
+    
     toast({
-      title: "Added to Cart",
-      description: `${product.name} has been added to your cart.`,
+      title: "Opening Email",
+      description: "Email client opening with product inquiry details.",
     });
   };
 
@@ -744,9 +741,9 @@ const Shop = () => {
                       
                       <Button
                         className="w-full bg-orange-500 hover:bg-orange-600 text-white"
-                        onClick={() => handleAddToCart(product)}
+                        onClick={() => handleEmailInquiry(product)}
                       >
-                        Add to cart
+                        Email Inquiry
                       </Button>
                     </CardContent>
                   </Card>
