@@ -291,6 +291,126 @@ const products: Product[] = [
     discount: 17,
     quantity: "1-2 chairs per pallet",
     status: "Available"
+  },
+  {
+    id: 16,
+    name: "MacBook Pro M2 Pallets",
+    originalPrice: 4000,
+    salePrice: 3200,
+    image: appleWatchNew,
+    description: "Latest MacBook Pro M2 13-inch and 15-inch models",
+    category: "macbook",
+    discount: 20,
+    quantity: "10 units per pallet",
+    status: "Available"
+  },
+  {
+    id: 17,
+    name: "MacBook Air M1 Pallets",
+    originalPrice: 3000,
+    salePrice: 2400,
+    image: electronicsVariety1,
+    description: "MacBook Air M1 in Space Gray, Silver, and Gold",
+    category: "macbook",
+    discount: 20,
+    quantity: "15 units per pallet",
+    status: "Available"
+  },
+  {
+    id: 18,
+    name: "Men's Clothing Mixed Pallet",
+    originalPrice: 800,
+    salePrice: 600,
+    image: nikeBasketball,
+    description: "Mixed men's clothing including shirts, pants, jackets",
+    category: "mens-clothing",
+    discount: 25,
+    quantity: "100 pieces per pallet",
+    status: "Available"
+  },
+  {
+    id: 19,
+    name: "Women's Fashion Pallet",
+    originalPrice: 900,
+    salePrice: 700,
+    image: sheinDress,
+    description: "Trendy women's clothing - dresses, tops, bottoms",
+    category: "womens-clothing",
+    discount: 22,
+    quantity: "120 pieces per pallet",
+    status: "Available"
+  },
+  {
+    id: 20,
+    name: "Kids Wholesale Clothing Pallet",
+    originalPrice: 600,
+    salePrice: 450,
+    image: diapersPallet,
+    description: "Children's clothing in various sizes and styles",
+    category: "kids-clothing",
+    discount: 25,
+    quantity: "150 pieces per pallet",
+    status: "Available"
+  },
+  {
+    id: 21,
+    name: "Tools & Hardware Pallet",
+    originalPrice: 1200,
+    salePrice: 900,
+    image: electronicsVariety2,
+    description: "Mixed tools, hardware, and equipment",
+    category: "tools",
+    discount: 25,
+    quantity: "50 tools per pallet",
+    status: "Available"
+  },
+  {
+    id: 22,
+    name: "Toys Mixed Pallet",
+    originalPrice: 800,
+    salePrice: 600,
+    image: christmasVariety1,
+    description: "Children's toys, games, and educational items",
+    category: "toys",
+    discount: 25,
+    quantity: "100 toys per pallet",
+    status: "Available"
+  },
+  {
+    id: 23,
+    name: "Cosmetics & Beauty Pallet",
+    originalPrice: 1000,
+    salePrice: 750,
+    image: perfumeVariety1,
+    description: "Mixed cosmetics, skincare, and beauty products",
+    category: "beauty",
+    discount: 25,
+    quantity: "200 items per pallet",
+    status: "Available"
+  },
+  {
+    id: 24,
+    name: "Rugs & Carpet Pallet",
+    originalPrice: 1500,
+    salePrice: 1200,
+    image: cloudWalkerShoes,
+    description: "Various sizes and styles of rugs and carpets",
+    category: "rugs",
+    discount: 20,
+    quantity: "20 rugs per pallet",
+    status: "Available"
+  },
+  {
+    id: 25,
+    name: "General Merchandise Pallet",
+    originalPrice: 1000,
+    salePrice: 800,
+    image: inflatablePools,
+    description: "Mixed general merchandise from major retailers",
+    category: "general",
+    discount: 20,
+    quantity: "Mixed items per pallet",
+    status: "Available"
   }
 ];
 
@@ -362,12 +482,20 @@ const Shop = () => {
     ? products 
     : products.filter(product => {
         if (selectedCategory === "CHRISTMAS PALLET") return product.category === "seasonal";
-        if (selectedCategory === "CLOTHES") return product.category === "clothing";
+        if (selectedCategory === "CLOTHES") return product.category === "clothing" || product.category === "mens-clothing" || product.category === "womens-clothing";
         if (selectedCategory === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION") return product.category === "electronics";
         if (selectedCategory === "SHOE PALLETS/TRUCKLOAD" || selectedCategory === "SNEAKER PALLETS") return product.category === "shoes";
         if (selectedCategory === "MASSAGE CHAIR") return product.category === "furniture";
         if (selectedCategory === "MIX COSMETIC") return product.category === "beauty";
         if (selectedCategory === "TISSUE PAPER") return product.category === "paper";
+        if (selectedCategory === "MAC BOOK") return product.category === "macbook";
+        if (selectedCategory === "MEN'S CLOTHING PALLET") return product.category === "mens-clothing";
+        if (selectedCategory === "WOMEN CLOTHING") return product.category === "womens-clothing";
+        if (selectedCategory === "KIDS WHOLESALE CLOTHING") return product.category === "kids-clothing";
+        if (selectedCategory === "TOOLS") return product.category === "tools";
+        if (selectedCategory === "TOYS PALLETS/TRUCKLOAD") return product.category === "toys";
+        if (selectedCategory === "RUGS AND CARPET") return product.category === "rugs";
+        if (selectedCategory === "GENERAL MERCHANDISE") return product.category === "general";
         return product.category.toLowerCase().includes(selectedCategory.toLowerCase());
       });
 
@@ -408,14 +536,25 @@ const Shop = () => {
                   {category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" ? "2" : 
                    category === "SHOE PALLETS/TRUCKLOAD" ? "4" : 
                    category === "MASSAGE CHAIR" ? "1" : 
-                   category === "CLOTHES" ? "1" : 
+                   category === "CLOTHES" ? "3" : 
                    category === "CHRISTMAS PALLET" ? "1" : 
                    category === "SNEAKER PALLETS" ? "3" : 
                    category === "TISSUE PAPER" ? "1" : 
-                   category === "TOOLS" ? "0" : 
+                   category === "MAC BOOK" ? "2" : 
+                   category === "MEN'S CLOTHING PALLET" ? "1" : 
+                   category === "WOMEN CLOTHING" ? "1" : 
+                   category === "KIDS WHOLESALE CLOTHING" ? "1" : 
+                   category === "TOOLS" ? "1" : 
+                   category === "TOYS PALLETS/TRUCKLOAD" ? "1" : 
+                   category === "RUGS AND CARPET" ? "1" : 
+                   category === "GENERAL MERCHANDISE" ? "1" : 
+                   category === "MIX COSMETIC" ? "2" : 
                    category === "UNCATEGORIZED" ? "3" : "1"} Product{(category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" || 
                    category === "SHOE PALLETS/TRUCKLOAD" || 
                    category === "SNEAKER PALLETS" || 
+                   category === "CLOTHES" || 
+                   category === "MAC BOOK" || 
+                   category === "MIX COSMETIC" || 
                    category === "UNCATEGORIZED") ? "s" : ""}
                 </span>
               </div>
