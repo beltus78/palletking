@@ -60,7 +60,7 @@ const StoreOverstock = () => {
             {/* Large Image Section - Right Side */}
             <div className="flex justify-center">
               <img 
-                src="/lovable-uploads/4f88d31d-7371-4696-b7d4-38d54826425a.png" 
+                src="/lovable-uploads/13259517-2c44-43d3-899d-807ffacebfc6.png" 
                 alt="Warehouse with liquidation pallets and overstock merchandise" 
                 className="w-full max-w-lg h-auto object-cover rounded-xl shadow-2xl"
                 loading="lazy"
