@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Heart, Search, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import ProductGallery from "./ProductGallery";
 
 // Use placeholder images for now since the imported ones are not working
 
@@ -18,9 +19,20 @@ const SaleProducts = () => {
       currentPrice: 1200,
       discount: 20,
       description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class",
-      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop", alt: "Adidas sneakers front view", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=400&h=400&fit=crop", alt: "Adidas sneakers side view", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?w=400&h=400&fit=crop", alt: "Adidas sneakers back view", angle: "Back View" },
+        { url: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=400&fit=crop", alt: "Adidas sneakers detail", angle: "Detail View" }
+      ],
       isFeatured: true,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "adidas-7", size: "Size 7-9", price: 1200, stock: 50 },
+        { id: "adidas-10", size: "Size 10-12", price: 1250, stock: 75 },
+        { id: "adidas-13", size: "Size 13+", price: 1300, stock: 25 }
+      ],
+      availability: ["Florida Warehouse", "Texas Distribution", "California Hub"]
     },
     {
       id: 2,
@@ -29,9 +41,19 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 33,
       description: "Step Into a New Level of Comfort and Style with Ultra-Lightweight, Breathable Footwear",
-      image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop", alt: "Cloud Walker front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop", alt: "Cloud Walker side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=400&fit=crop", alt: "Cloud Walker back", angle: "Back View" }
+      ],
       isFeatured: true,
-      status: "New"
+      status: "New",
+      variations: [
+        { id: "cloud-white", color: "White", price: 1000, stock: 100 },
+        { id: "cloud-black", color: "Black", price: 1000, stock: 80 },
+        { id: "cloud-gray", color: "Gray", price: 1000, stock: 60 }
+      ],
+      availability: ["All Warehouses", "Direct Ship"]
     },
     {
       id: 3,
@@ -40,9 +62,18 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 17,
       description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. $1000 a pallet which contains 100 pairs",
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", alt: "Hoka Clifton front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop", alt: "Hoka Clifton side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop", alt: "Hoka Clifton back", angle: "Back View" }
+      ],
       isFeatured: true,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "hoka-mens", size: "Men's Sizes", price: 1000, stock: 50 },
+        { id: "hoka-womens", size: "Women's Sizes", price: 1000, stock: 50 }
+      ],
+      availability: ["Florida Warehouse", "Texas Distribution"]
     },
     {
       id: 4,
@@ -51,9 +82,18 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 0,
       description: "Premium Stanley Cup merchandise pallets for resale. 50 cups per pallet",
-      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop", alt: "Stanley Cup front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop", alt: "Stanley Cup side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1549298916-acc8b4bc8b4e?w=400&h=400&fit=crop", alt: "Stanley Cup colors", angle: "Color Options" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "stanley-20oz", size: "20oz", price: 1000, stock: 30 },
+        { id: "stanley-30oz", size: "30oz", price: 1100, stock: 20 }
+      ],
+      availability: ["All Warehouses"]
     },
     {
       id: 5,
@@ -62,9 +102,19 @@ const SaleProducts = () => {
       currentPrice: 500,
       discount: 0,
       description: "Discover your perfect Shein Dress! Trendy, chic, and affordable. 200 pieces per pallet",
-      image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=400&fit=crop", alt: "Shein dresses front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1566479179817-51c53f5c64b2?w=400&h=400&fit=crop", alt: "Shein dresses variety", angle: "Style Variety" },
+        { url: "https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?w=400&h=400&fit=crop", alt: "Shein dresses colors", angle: "Color Options" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "shein-xs-s", size: "XS-S", price: 500, stock: 100 },
+        { id: "shein-m-l", size: "M-L", price: 500, stock: 80 },
+        { id: "shein-xl-xxl", size: "XL-XXL", price: 500, stock: 20 }
+      ],
+      availability: ["California Hub", "Texas Distribution"]
     },
     {
       id: 6,
@@ -73,9 +123,18 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 33,
       description: "Premium Apple Watch Series 8 pallets. 100 Pieces Per Pallet",
-      image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&h=400&fit=crop", alt: "Apple Watch front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1579586337278-3f436f25d4d6?w=400&h=400&fit=crop", alt: "Apple Watch side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1544117519-31a4b719223d?w=400&h=400&fit=crop", alt: "Apple Watch bands", angle: "Band Options" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "watch-41mm", size: "41mm", price: 1000, stock: 50 },
+        { id: "watch-45mm", size: "45mm", price: 1050, stock: 50 }
+      ],
+      availability: ["Florida Warehouse", "Direct Ship"]
     },
     {
       id: 7,
@@ -84,9 +143,14 @@ const SaleProducts = () => {
       currentPrice: 300,
       discount: 40,
       description: "Transform your backyard into a summer paradise with a Inflatable Pool. Enjoy endless fun, relaxation, and memorable moments.",
-      image: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?w=400&h=400&fit=crop", alt: "Pool setup", angle: "Setup View" },
+        { url: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=400&h=400&fit=crop", alt: "Pool family", angle: "In Use" },
+        { url: "https://images.unsplash.com/photo-1618773928121-c32242e63f39?w=400&h=400&fit=crop", alt: "Pool packed", angle: "Packaged" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      availability: ["Texas Distribution", "California Hub"]
     },
     {
       id: 8,
@@ -95,9 +159,19 @@ const SaleProducts = () => {
       currentPrice: 800,
       discount: 20,
       description: "Looking for a reliable supplier of high-quality all good diapers pallets? 200 pieces per pallet",
-      image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?w=400&h=400&fit=crop", alt: "Diaper packaging", angle: "Package View" },
+        { url: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=400&fit=crop", alt: "Diaper sizes", angle: "Size Options" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "diaper-nb", size: "Newborn", price: 800, stock: 40 },
+        { id: "diaper-1", size: "Size 1", price: 800, stock: 50 },
+        { id: "diaper-2", size: "Size 2", price: 800, stock: 60 },
+        { id: "diaper-3", size: "Size 3", price: 800, stock: 50 }
+      ],
+      availability: ["All Warehouses"]
     }
   ];
 
@@ -135,66 +209,27 @@ const SaleProducts = () => {
           {products.map((product, index) => (
             <article 
               key={product.id} 
-              className="modern-card group hover:scale-[1.02] transition-all duration-300"
+              className="modern-card group"
               itemScope 
               itemType="https://schema.org/Product"
               itemProp="itemListElement"
             >
-              <div className="relative overflow-hidden">
-                {/* Discount Badge */}
+              {/* Discount and Feature Badges */}
+              <div className="relative">
                 {product.discount && product.discount > 0 && (
                   <Badge className="absolute top-3 left-3 z-10 bg-destructive text-destructive-foreground px-3 py-1 text-sm font-bold rounded-xl">
                     -{product.discount}%
                   </Badge>
                 )}
                 
-                {/* Feature Badges */}
                 {product.isFeatured && (
                   <Badge className="absolute top-3 right-3 z-10 bg-accent text-accent-foreground px-3 py-1 text-xs font-bold rounded-xl">
                     FEATURED
                   </Badge>
                 )}
-                
-                {/* Product Image */}
-                <div className="relative overflow-hidden aspect-square modern-image">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    itemProp="image"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.src = `https://via.placeholder.com/400x400/f0f0f0/333333?text=${encodeURIComponent(product.name.slice(0, 20))}`;
-                    }}
-                  />
-                  
-                  {/* Hover Actions */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Quick view"
-                    >
-                      <Search className="h-5 w-5" />
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Email inquiry"
-                      onClick={() => sendProductInquiry(product)}
-                    >
-                      <Mail className="h-5 w-5" />
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Add to wishlist"
-                      onClick={() => addToWishlist(product)}
-                    >
-                      <Heart className="h-5 w-5" />
-                    </Button>
-                  </div>
-                </div>
+
+                {/* Interactive Product Gallery */}
+                <ProductGallery product={product} />
               </div>
 
               <div className="p-4 sm:p-6">
