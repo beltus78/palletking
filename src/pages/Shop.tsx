@@ -22,13 +22,26 @@ interface Product {
   status: string;
 }
 
+import adidasSneakersPallet from "@/assets/products/adidas-sneakers-pallet.jpg";
+import inflatablePools from "@/assets/products/inflatable-pools.jpg";
+import diapersPallet from "@/assets/products/diapers-pallet.jpg";
+import adidasSneakers from "@/assets/products/adidas-sneakers.jpg";
+import toiletPaper from "@/assets/products/adidas-sneakers.jpg";
+import cloudWalkerNew from "@/assets/products/cloud-walker-new.jpg";
+import hokaNew from "@/assets/products/hoka-clifton-new.jpg";
+import stanleyCupNew from "@/assets/products/stanley-cup-new.jpg";
+import sheinDress from "@/assets/products/shein-dress.jpg";
+import appleWatchNew from "@/assets/products/apple-watch-new.jpg";
+import cloudWalkerShoes from "@/assets/products/cloud-walker-shoes.jpg";
+import nikeBasketball from "@/assets/products/nike-basketball.jpg";
+
 const products: Product[] = [
   {
     id: 1,
     name: "Adidas Sport Sneakers Pallets",
     originalPrice: 1500,
     salePrice: 1200,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.54.23-600x600.jpeg.webp",
+    image: adidasSneakersPallet,
     description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class",
     category: "shoes",
     discount: 20,
@@ -40,7 +53,7 @@ const products: Product[] = [
     name: "Affordables Inflatable Pools for Summer Fun-Pallet",
     originalPrice: 500,
     salePrice: 300,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2021/10/Pool-600x600.jpg",
+    image: inflatablePools,
     description: "Transform your backyard into a summer paradise with a Inflatable Pool",
     category: "outdoor",
     discount: 40,
@@ -52,7 +65,7 @@ const products: Product[] = [
     name: "All Good Diapers for Your Little One's Comfort All Day-Pallet",
     originalPrice: 1000,
     salePrice: 800,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/05/photo_5134255269608532577_x.jpg.webp",
+    image: diapersPallet,
     description: "High-quality all good diapers pallets from well-known brands",
     category: "baby",
     discount: 20,
@@ -64,7 +77,7 @@ const products: Product[] = [
     name: "ALL STAR SHOE PALLET",
     originalPrice: 1500,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-12-at-2.44.13-PM-600x600.jpeg.webp",
+    image: adidasSneakers,
     description: "American lifestyle brand that are durable shoes thanks to high quality materials",
     category: "shoes",
     discount: 33,
@@ -76,7 +89,7 @@ const products: Product[] = [
     name: "Angel Soft Professional Series Premium 2-Ply Toilet Paper",
     originalPrice: 500,
     salePrice: 300,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-01-at-4.46.23-PM-600x600.jpeg.webp",
+    image: toiletPaper,
     description: "Premium 2-Ply Embossed Toilet Paper by GP PRO (Georgia-Pacific)",
     category: "paper",
     discount: 40,
@@ -88,7 +101,7 @@ const products: Product[] = [
     name: "Cloud Walker Shoes",
     originalPrice: 1500,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2025/03/WhatsApp-Image-2025-03-05-at-11.02.08-PM.jpeg",
+    image: cloudWalkerNew,
     description: "Ultra-Lightweight, Breathable Footwear Designed for Everyday Wear",
     category: "shoes",
     discount: 33,
@@ -100,7 +113,7 @@ const products: Product[] = [
     name: "Shop Hoka Clifton-Pallets",
     originalPrice: 1200,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/08/WhatsApp-Image-2024-08-23-at-3.33.16-PM.jpeg",
+    image: hokaNew,
     description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes",
     category: "shoes",
     discount: 17,
@@ -112,7 +125,7 @@ const products: Product[] = [
     name: "Stanley Cup Pallets",
     originalPrice: 1000,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-3.jpeg",
+    image: stanleyCupNew,
     description: "Premium Stanley Cup collection for your beverage needs",
     category: "accessories",
     discount: 0,
@@ -124,7 +137,7 @@ const products: Product[] = [
     name: "Discover the Best Shein Dress Deals Here-Pallets",
     originalPrice: 500,
     salePrice: 500,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-05-at-7.41.03-PM-600x600.jpeg.webp",
+    image: sheinDress,
     description: "Trendy, chic, and affordable dresses. Elevate your style effortlessly",
     category: "clothing",
     discount: 0,
@@ -136,7 +149,7 @@ const products: Product[] = [
     name: "Series 8 Apple Watch Pallets",
     originalPrice: 1500,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/05/WhatsApp-Image-2024-05-10-at-22.22.00-1.jpeg",
+    image: appleWatchNew,
     description: "Latest Series 8 Apple Watch collection",
     category: "electronics",
     discount: 33,
@@ -148,7 +161,7 @@ const products: Product[] = [
     name: "Perfume Pallets",
     originalPrice: 1200,
     salePrice: 1000,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-01-at-4.46.23-PM-1-600x600.jpeg.webp",
+    image: cloudWalkerShoes,
     description: "Premium fragrance collection from top brands",
     category: "beauty",
     discount: 17,
@@ -160,7 +173,7 @@ const products: Product[] = [
     name: "Nike Basketball shoes Pallets",
     originalPrice: 1500,
     salePrice: 1200,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/01/WhatsApp-Image-2023-01-20-at-02.52.48-600x600.jpeg.webp",
+    image: nikeBasketball,
     description: "High-quality Nike basketball shoes in various sizes",
     category: "shoes",
     discount: 20,
@@ -172,7 +185,7 @@ const products: Product[] = [
     name: "Christmas Decoration Pallets",
     originalPrice: 800,
     salePrice: 600,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2023/12/christmas-decorations-600x600.jpg",
+    image: sheinDress,
     description: "Festive Christmas decorations and ornaments",
     category: "seasonal",
     discount: 25,
@@ -184,7 +197,7 @@ const products: Product[] = [
     name: "Electronics Mixed Pallets",
     originalPrice: 2000,
     salePrice: 1500,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/03/electronics-pallet-600x600.jpg",
+    image: appleWatchNew,
     description: "Mixed electronics including phones, tablets, and accessories",
     category: "electronics",
     discount: 25,
@@ -196,7 +209,7 @@ const products: Product[] = [
     name: "Massage Chair Collection",
     originalPrice: 3000,
     salePrice: 2500,
-    image: "https://mypalletliquidationcenter.com/wp-content/uploads/2024/01/massage-chair-600x600.jpg",
+    image: cloudWalkerShoes,
     description: "Premium massage chairs with multiple settings",
     category: "furniture",
     discount: 17,
