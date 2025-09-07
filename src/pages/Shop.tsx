@@ -53,6 +53,16 @@ import electronicsVariety1 from "@/assets/products/electronics-variety-1.jpg";
 import electronicsVariety2 from "@/assets/products/electronics-variety-2.jpg";
 import christmasVariety1 from "@/assets/products/christmas-variety-1.jpg";
 import perfumeVariety1 from "@/assets/products/perfume-variety-1.jpg";
+import macbookCollection from "@/assets/products/macbook-collection.jpg";
+import mensClothing from "@/assets/products/mens-clothing.jpg";
+import womensClothing from "@/assets/products/womens-clothing.jpg";
+import kidsClothing from "@/assets/products/kids-clothing.jpg";
+import toolsHardware from "@/assets/products/tools-hardware.jpg";
+import toysCollection from "@/assets/products/toys-collection.jpg";
+import rugsCarpets from "@/assets/products/rugs-carpets.jpg";
+import generalMerchandise from "@/assets/products/general-merchandise.jpg";
+import massageChairs from "@/assets/products/massage-chairs.jpg";
+import logo from "@/assets/logo.png";
 
 const products: Product[] = [
   {
@@ -285,7 +295,7 @@ const products: Product[] = [
     name: "Massage Chair Collection",
     originalPrice: 3000,
     salePrice: 2500,
-    image: cloudWalkerShoes,
+    image: massageChairs,
     description: "Premium massage chairs with multiple settings",
     category: "furniture",
     discount: 17,
@@ -297,7 +307,7 @@ const products: Product[] = [
     name: "MacBook Pro M2 Pallets",
     originalPrice: 4000,
     salePrice: 3200,
-    image: appleWatchNew,
+    image: macbookCollection,
     description: "Latest MacBook Pro M2 13-inch and 15-inch models",
     category: "macbook",
     discount: 20,
@@ -309,7 +319,7 @@ const products: Product[] = [
     name: "MacBook Air M1 Pallets",
     originalPrice: 3000,
     salePrice: 2400,
-    image: electronicsVariety1,
+    image: macbookCollection,
     description: "MacBook Air M1 in Space Gray, Silver, and Gold",
     category: "macbook",
     discount: 20,
@@ -321,7 +331,7 @@ const products: Product[] = [
     name: "Men's Clothing Mixed Pallet",
     originalPrice: 800,
     salePrice: 600,
-    image: nikeBasketball,
+    image: mensClothing,
     description: "Mixed men's clothing including shirts, pants, jackets",
     category: "mens-clothing",
     discount: 25,
@@ -333,7 +343,7 @@ const products: Product[] = [
     name: "Women's Fashion Pallet",
     originalPrice: 900,
     salePrice: 700,
-    image: sheinDress,
+    image: womensClothing,
     description: "Trendy women's clothing - dresses, tops, bottoms",
     category: "womens-clothing",
     discount: 22,
@@ -345,7 +355,7 @@ const products: Product[] = [
     name: "Kids Wholesale Clothing Pallet",
     originalPrice: 600,
     salePrice: 450,
-    image: diapersPallet,
+    image: kidsClothing,
     description: "Children's clothing in various sizes and styles",
     category: "kids-clothing",
     discount: 25,
@@ -357,7 +367,7 @@ const products: Product[] = [
     name: "Tools & Hardware Pallet",
     originalPrice: 1200,
     salePrice: 900,
-    image: electronicsVariety2,
+    image: toolsHardware,
     description: "Mixed tools, hardware, and equipment",
     category: "tools",
     discount: 25,
@@ -369,7 +379,7 @@ const products: Product[] = [
     name: "Toys Mixed Pallet",
     originalPrice: 800,
     salePrice: 600,
-    image: christmasVariety1,
+    image: toysCollection,
     description: "Children's toys, games, and educational items",
     category: "toys",
     discount: 25,
@@ -393,7 +403,7 @@ const products: Product[] = [
     name: "Rugs & Carpet Pallet",
     originalPrice: 1500,
     salePrice: 1200,
-    image: cloudWalkerShoes,
+    image: rugsCarpets,
     description: "Various sizes and styles of rugs and carpets",
     category: "rugs",
     discount: 20,
@@ -405,7 +415,7 @@ const products: Product[] = [
     name: "General Merchandise Pallet",
     originalPrice: 1000,
     salePrice: 800,
-    image: inflatablePools,
+    image: generalMerchandise,
     description: "Mixed general merchandise from major retailers",
     category: "general",
     discount: 20,
@@ -514,49 +524,25 @@ const Shop = () => {
           
           {/* Category Tags */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <div 
-              onClick={() => handleCategoryClick("ALL")}
-              className={`cursor-pointer px-4 py-2 rounded transition-colors ${
-                selectedCategory === "ALL" ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
-              }`}
-            >
-              <span className="text-sm font-medium">ALL PRODUCTS</span>
-              <span className="text-gray-400 text-xs ml-2">{products.length} Products</span>
-            </div>
+              <div 
+                onClick={() => handleCategoryClick("ALL")}
+                className={`cursor-pointer px-4 py-2 rounded transition-colors flex items-center gap-2 ${
+                  selectedCategory === "ALL" ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
+                }`}
+              >
+                <img src={logo} alt="Logo" className="w-5 h-5" />
+                <span className="text-sm font-medium">ALL PRODUCTS</span>
+              </div>
             {topCategories.map((category, index) => (
               <div 
                 key={index} 
                 onClick={() => handleCategoryClick(category)}
-                className={`cursor-pointer px-4 py-2 rounded transition-colors ${
+                className={`cursor-pointer px-4 py-2 rounded transition-colors flex items-center gap-2 ${
                   selectedCategory === category ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
                 }`}
               >
+                <img src={logo} alt="Logo" className="w-5 h-5" />
                 <span className="text-sm font-medium">{category}</span>
-                <span className="text-gray-400 text-xs ml-2">
-                  {category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" ? "2" : 
-                   category === "SHOE PALLETS/TRUCKLOAD" ? "4" : 
-                   category === "MASSAGE CHAIR" ? "1" : 
-                   category === "CLOTHES" ? "3" : 
-                   category === "CHRISTMAS PALLET" ? "1" : 
-                   category === "SNEAKER PALLETS" ? "3" : 
-                   category === "TISSUE PAPER" ? "1" : 
-                   category === "MAC BOOK" ? "2" : 
-                   category === "MEN'S CLOTHING PALLET" ? "1" : 
-                   category === "WOMEN CLOTHING" ? "1" : 
-                   category === "KIDS WHOLESALE CLOTHING" ? "1" : 
-                   category === "TOOLS" ? "1" : 
-                   category === "TOYS PALLETS/TRUCKLOAD" ? "1" : 
-                   category === "RUGS AND CARPET" ? "1" : 
-                   category === "GENERAL MERCHANDISE" ? "1" : 
-                   category === "MIX COSMETIC" ? "2" : 
-                   category === "UNCATEGORIZED" ? "3" : "1"} Product{(category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" || 
-                   category === "SHOE PALLETS/TRUCKLOAD" || 
-                   category === "SNEAKER PALLETS" || 
-                   category === "CLOTHES" || 
-                   category === "MAC BOOK" || 
-                   category === "MIX COSMETIC" || 
-                   category === "UNCATEGORIZED") ? "s" : ""}
-                </span>
               </div>
             ))}
           </div>
