@@ -5,13 +5,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Heart, Search, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
 
-// Import actual product images
-import adidasImage from "@/assets/products/adidas-sneakers.jpg";
-import cloudWalkerImage from "@/assets/products/cloud-walker-shoes.jpg";
-import hokaImage from "@/assets/products/hoka-clifton.jpg";
-import stanleyCupImage from "@/assets/products/stanley-cup.jpg";
-import sheinDressImage from "@/assets/products/shein-dress.jpg";
-import appleWatchImage from "@/assets/products/apple-watch.jpg";
+// Use placeholder images for now since the imported ones are not working
 
 const SaleProducts = () => {
   const { toast } = useToast();
@@ -24,7 +18,7 @@ const SaleProducts = () => {
       currentPrice: 1200,
       discount: 20,
       description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class",
-      image: adidasImage,
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop",
       isFeatured: true,
       status: "Available"
     },
@@ -35,7 +29,7 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 33,
       description: "Step Into a New Level of Comfort and Style with Ultra-Lightweight, Breathable Footwear",
-      image: cloudWalkerImage,
+      image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop",
       isFeatured: true,
       status: "New"
     },
@@ -46,7 +40,7 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 17,
       description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. $1000 a pallet which contains 100 pairs",
-      image: hokaImage,
+      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
       isFeatured: true,
       status: "Available"
     },
@@ -57,7 +51,7 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 0,
       description: "Premium Stanley Cup merchandise pallets for resale. 50 cups per pallet",
-      image: stanleyCupImage,
+      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
       isFeatured: false,
       status: "Available"
     },
@@ -68,7 +62,7 @@ const SaleProducts = () => {
       currentPrice: 500,
       discount: 0,
       description: "Discover your perfect Shein Dress! Trendy, chic, and affordable. 200 pieces per pallet",
-      image: sheinDressImage,
+      image: "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?w=400&h=400&fit=crop",
       isFeatured: false,
       status: "Available"
     },
@@ -79,7 +73,7 @@ const SaleProducts = () => {
       currentPrice: 1000,
       discount: 33,
       description: "Premium Apple Watch Series 8 pallets. 100 Pieces Per Pallet",
-      image: appleWatchImage,
+      image: "https://images.unsplash.com/photo-1551816230-ef5deaed4a26?w=400&h=400&fit=crop",
       isFeatured: false,
       status: "Available"
     },
