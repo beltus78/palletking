@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,58 +9,41 @@ import { useState } from "react";
 
 const faqData = [
   {
-    category: "Getting Started",
+    category: "SHOPPING INFORMATION",
     questions: [
       {
-        question: "How do I start buying liquidation pallets?",
-        answer: "To start buying liquidation pallets, browse our shop section, select the pallets you're interested in, and add them to your cart. You can purchase individual pallets or contact us for bulk pricing on truckload quantities. We recommend starting with smaller quantities to understand the merchandise before scaling up."
+        question: "WHAT ARE LIQUIDATION PALLETS?",
+        answer: "Liquidation pallets are part of the reverse logistics industry. Reverse logistics is when companies bid for direct contracts with retailers to acquire liquidation contracts. Liquidation contracts yield bulk merchandise which then resells to secondary retailers, wholesalers, or other resellers. This bulk merchandise is often bought by the pallet or gaylord."
       },
       {
-        question: "What types of merchandise do you offer?",
-        answer: "We offer a wide variety of liquidation merchandise including shoes, clothing, electronics, beauty products, baby items, household goods, paper products, and more. All our pallets contain customer returns, surplus inventory, shelf pulls, and overstock from major US retailers."
+        question: "What type merchandise can I buy by the pallet?",
+        answer: "Our customers buy pallets of merchandise from over 100 different categories. Most of the items we carry are overstock or shelf-pulls. Some categories include: Pallets of Food/Candy, clothing and accessories, electronics, health and personal care products, home and garden supplies, sporting goods, outdoor gear and apparel, shoes, handbags and accessories, luggage and travel accessories, sports equipment, toys and games."
       },
       {
-        question: "Do I need a business license to purchase?",
-        answer: "While not always required for individual purchases, we recommend having a business license for tax purposes and to establish wholesale relationships. For bulk orders and truckload purchases, a business license is typically required."
+        question: "What makes Pallets Liquidation Center different from other liquidation companies?",
+        answer: "Pallets Liquidation Center has been in the wholesale industry for nearly 10 years. We've managed to tap into the supply chain of some largest retailers and manufacturers in North America. We offer our partners access to tier-1 brands and private label goods at unbeatable prices. Our staff is made up of industry experts that will help you find the right pallet of merchandise to meet your needs."
       }
     ]
   },
   {
-    category: "Pricing & Payment",
-    questions: [
-      {
-        question: "How is pallet pricing determined?",
-        answer: "Pallet pricing is based on the type of merchandise, retail value, condition, and quantity. We offer competitive wholesale pricing with better discounts for bulk purchases. Truckload quantities receive the best per-pallet pricing."
-      },
-      {
-        question: "What payment methods do you accept?",
-        answer: "We accept multiple payment methods including credit cards, bank wire transfers, Apple Pay, Bitcoin, and we also offer line of credit options for qualified customers. Payment is typically required before shipment."
-      },
-      {
-        question: "Are there additional fees?",
-        answer: "Our listed prices include the pallet cost. Additional fees may include shipping, insurance, and any special handling requirements. We provide transparent pricing with no hidden fees."
-      }
-    ]
-  },
-  {
-    category: "Shipping & Logistics",
+    category: "PAYMENT & SHIPPING",
     questions: [
       {
         question: "How much does shipping cost?",
         answer: "Shipping costs vary based on location, pallet size, weight, and quantity. We offer competitive shipping rates and can arrange freight shipping for large orders. You can also arrange your own shipping or pick up pallets in person."
       },
       {
-        question: "How long does shipping take?",
-        answer: "Standard shipping typically takes 3-7 business days within the continental US. Freight shipments for larger orders may take 5-10 business days. We provide tracking information for all shipments."
+        question: "What payment methods do you accept?",
+        answer: "We accept multiple payment methods including credit cards, bank wire transfers, Apple Pay, Bitcoin, and we also offer line of credit options for qualified customers. Payment is typically required before shipment."
       },
       {
-        question: "Can I pick up pallets in person?",
-        answer: "Yes, you can arrange to pick up pallets at our Florida location. This saves on shipping costs and allows you to inspect pallets before taking them. Please schedule pickup appointments in advance."
+        question: "Do you offer bulk discounts?",
+        answer: "Yes, we offer progressive discounts for larger quantities. Truckload purchases receive the best pricing. Contact our sales team for custom quotes on bulk orders and ongoing supply agreements."
       }
     ]
   },
   {
-    category: "Merchandise Quality",
+    category: "MERCHANDISE QUALITY",
     questions: [
       {
         question: "What condition is the merchandise in?",
@@ -76,19 +60,19 @@ const faqData = [
     ]
   },
   {
-    category: "Business Support",
+    category: "GETTING STARTED",
     questions: [
       {
-        question: "Do you offer volume discounts?",
-        answer: "Yes, we offer progressive discounts for larger quantities. Truckload purchases receive the best pricing. Contact our sales team for custom quotes on bulk orders and ongoing supply agreements."
+        question: "How do I start buying liquidation pallets?",
+        answer: "To start buying liquidation pallets, browse our shop section, select the pallets you're interested in, and add them to your cart. You can purchase individual pallets or contact us for bulk pricing on truckload quantities. We recommend starting with smaller quantities to understand the merchandise before scaling up."
+      },
+      {
+        question: "Do I need a business license to purchase?",
+        answer: "While not always required for individual purchases, we recommend having a business license for tax purposes and to establish wholesale relationships. For bulk orders and truckload purchases, a business license is typically required."
       },
       {
         question: "Can you help with business guidance?",
         answer: "Our experienced team can provide guidance on getting started in the liquidation business, including advice on profitable product categories, pricing strategies, and market insights. We want our customers to succeed."
-      },
-      {
-        question: "Do you have a distribution agreement?",
-        answer: "Some pallets may require a distribution agreement, which will be clearly noted in the product listing. This helps ensure proper distribution channels and protects brand integrity."
       }
     ]
   }
@@ -231,6 +215,7 @@ const FAQ = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
