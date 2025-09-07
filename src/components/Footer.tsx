@@ -56,19 +56,30 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
-      {/* Centered Customer Support Section */}
-      <section className="bg-gradient-to-r from-orange-500 to-orange-600 py-8">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h3 className="text-2xl font-bold text-white mb-4">
-            First Class Customer Support & Service
+      {/* Retailer Partners Section */}
+      <section className="py-12 bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">
+            Our Trusted Retail Partners
           </h3>
-          <p className="text-orange-100 text-lg max-w-3xl mx-auto">
-            We are Available 24/7 to assist you with all your liquidation pallet needs. 
-            Call us now at +1(541)-515-7780 or email info@mypalletliquidationcenter.com
-          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center">
+            {retailerLogos.map((retailer) => (
+              <div key={retailer.name} className="flex justify-center items-center bg-white p-4 rounded-lg hover:shadow-lg transition-shadow">
+                <img 
+                  src={retailer.logo} 
+                  alt={`${retailer.name} logo`}
+                  className="h-12 w-auto max-w-full object-contain"
+                  onError={(e) => {
+                    if (retailer.fallback) {
+                      e.currentTarget.src = retailer.fallback;
+                    }
+                  }}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
-
 
       {/* Main Footer */}
       <div className="py-12">

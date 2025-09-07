@@ -86,14 +86,14 @@ const Header = () => {
             {/* Right Side - Login, Wishlist, Cart exactly like original */}
             <div className="flex items-center space-x-6">
               <div className="text-center">
-                <Button variant="ghost" className="flex flex-col items-center p-2 text-gray-700 hover:text-gray-900">
+                <Button variant="ghost" className="flex flex-col items-center p-2 text-white hover:text-gray-200">
                   <User className="h-5 w-5 mb-1" />
                   <span className="text-xs font-medium">LOGIN / REGISTER</span>
                 </Button>
               </div>
               
               <div className="text-center">
-                <Button variant="ghost" className="flex flex-col items-center p-2 text-gray-700 hover:text-gray-900 relative">
+                <Button variant="ghost" className="flex flex-col items-center p-2 text-white hover:text-gray-200 relative">
                   <Heart className="h-5 w-5 mb-1" />
                   <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs bg-orange-500 border-0">
                     0
@@ -103,7 +103,7 @@ const Header = () => {
               </div>
               
               <div className="text-center">
-                <Button variant="ghost" className="flex flex-col items-center p-2 text-gray-700 hover:text-gray-900 relative">
+                <Button variant="ghost" className="flex flex-col items-center p-2 text-white hover:text-gray-200 relative">
                   <ShoppingCart className="h-5 w-5 mb-1" />
                   <Badge variant="destructive" className="absolute -top-1 -right-1 h-5 w-5 flex items-center justify-center p-0 text-xs bg-orange-500 border-0">
                     0
@@ -114,8 +114,8 @@ const Header = () => {
               
               <div className="text-center">
                 <div className="flex items-center">
-                  <span className="text-sm">0 items/</span>
-                  <span className="text-lg font-bold text-gray-900">$0.00</span>
+                  <span className="text-sm text-white">0 items/</span>
+                  <span className="text-lg font-bold text-white">$0.00</span>
                 </div>
               </div>
             </div>
