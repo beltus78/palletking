@@ -43,7 +43,7 @@ import stanleyVariety1 from "@/assets/products/stanley-variety-1.jpg";
 import stanleyVariety2 from "@/assets/products/stanley-variety-2.jpg";
 import sheinDress from "@/assets/products/shein-dress.jpg";
 import sheinVariety1 from "@/assets/products/shein-variety-1.jpg";
-import appleWatchNew from "@/assets/products/apple-watch-new.jpg";
+import appleWatchNew from "@/assets/products/apple-watch.jpg";
 import appleWatchVariety1 from "@/assets/products/apple-watch-variety-1.jpg";
 import appleWatchVariety2 from "@/assets/products/apple-watch-variety-2.jpg";
 import cloudWalkerShoes from "@/assets/products/cloud-walker-shoes.jpg";
