@@ -23,50 +23,27 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Here you would normally send the email to your backend
-    // For now, we'll simulate the email sending
-    try {
-      // Simulate API call to send email
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          to: 'info@mypalletliquidationcenter.com'
-        }),
-      });
-
-      if (response.ok) {
-        toast({
-          title: "Message Sent Successfully!",
-          description: "Thank you for contacting us. We'll get back to you shortly.",
-        });
-        setFormData({
-          name: "",
-          email: "",
-          phone: "",
-          subject: "",
-          message: ""
-        });
-      } else {
-        throw new Error('Failed to send message');
-      }
-    } catch (error) {
-      // For demo purposes, we'll show success anyway
-      toast({
-        title: "Message Sent!",
-        description: "Thank you for contacting us. We'll get back to you shortly.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: ""
-      });
-    }
+    // Create mailto link for direct email sending
+    const subject = `Contact Form: ${formData.subject}`;
+    const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
+    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    toast({
+      title: "Email Client Opening",
+      description: "Your default email client will open with the pre-filled message.",
+    });
+    
+    // Clear form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: ""
+    });
   };
 
   const handleInputChange = (field: string, value: string) => {

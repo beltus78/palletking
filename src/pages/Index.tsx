@@ -1,10 +1,9 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
-import ProductCategories from "@/components/ProductCategories";
 import SaleProducts from "@/components/SaleProducts";
+import AboutSection from "@/components/AboutSection";
 import StoreOverstock from "@/components/StoreOverstock";
 import Features from "@/components/Features";
-import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -13,9 +12,8 @@ const Index = () => {
       <Header />
       <main role="main">
         <HeroSection />
-        <ProductCategories />
-        <AboutSection />
         <SaleProducts />
+        <AboutSection />
         <StoreOverstock />
         <Features />
       </main>
