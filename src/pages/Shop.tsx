@@ -37,7 +37,7 @@ import allstarVariety1 from "@/assets/products/allstar-variety-1.jpg";
 import toiletPaper from "@/assets/products/diapers-pallet.jpg";
 import cloudWalkerNew from "@/assets/products/cloud-walker-new.jpg";
 import cloudWalkerVariety1 from "@/assets/products/cloud-walker-variety-1.jpg";
-import hokaNew from "@/assets/products/hoka-clifton-new.jpg";
+import hokaOriginal from "@/assets/products/hoka-clifton.jpg";
 import hokaVariety1 from "@/assets/products/hoka-variety-1.jpg";
 import stanleyCupNew from "@/assets/products/stanley-cup-new.jpg";
 import stanleyVariety1 from "@/assets/products/stanley-variety-1.jpg";
@@ -170,7 +170,7 @@ const products: Product[] = [
     name: "Shop Hoka Clifton-Pallets",
     originalPrice: 1200,
     salePrice: 1000,
-    image: hokaNew,
+    image: hokaOriginal,
     description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. Professional athlete grade quality.",
     category: "shoes",
     discount: 17,
@@ -178,7 +178,7 @@ const products: Product[] = [
     status: "Available",
     shippingMethod: "Free shipping on all orders, Express delivery 1-3 business days",
     images: [
-      { url: hokaNew, alt: "Hoka Clifton Shoes", angle: "Product View" },
+      { url: hokaOriginal, alt: "Hoka Clifton Shoes", angle: "Product View" },
       { url: hokaVariety1, alt: "Hoka Collection", angle: "Variety View" }
     ]
   },
