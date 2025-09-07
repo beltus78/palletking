@@ -258,6 +258,7 @@ const Shop = () => {
   const [viewType, setViewType] = useState("grid");
   const [sortBy, setSortBy] = useState("default");
   const [itemsPerPage, setItemsPerPage] = useState(9);
+  const [selectedCategory, setSelectedCategory] = useState("ALL");
   const { toast } = useToast();
 
   const addToCart = (product: Product) => {
@@ -265,6 +266,24 @@ const Shop = () => {
       title: "Added to Cart",
       description: `${product.name} has been added to your cart.`,
     });
+  };
+
+  // Filter products based on selected category
+  const filteredProducts = selectedCategory === "ALL" 
+    ? products 
+    : products.filter(product => {
+        if (selectedCategory === "CHRISTMAS PALLET") return product.category === "seasonal";
+        if (selectedCategory === "CLOTHES") return product.category === "clothing";
+        if (selectedCategory === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION") return product.category === "electronics";
+        if (selectedCategory === "SHOE PALLETS/TRUCKLOAD" || selectedCategory === "SNEAKER PALLETS") return product.category === "shoes";
+        if (selectedCategory === "MASSAGE CHAIR") return product.category === "furniture";
+        if (selectedCategory === "MIX COSMETIC") return product.category === "beauty";
+        if (selectedCategory === "TISSUE PAPER") return product.category === "paper";
+        return product.category.toLowerCase().includes(selectedCategory.toLowerCase());
+      });
+
+  const handleCategoryClick = (category: string) => {
+    setSelectedCategory(category);
   };
 
   return (
@@ -278,26 +297,36 @@ const Shop = () => {
           
           {/* Category Tags */}
           <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div 
+              onClick={() => handleCategoryClick("ALL")}
+              className={`cursor-pointer px-4 py-2 rounded transition-colors ${
+                selectedCategory === "ALL" ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
+              }`}
+            >
+              <span className="text-sm font-medium">ALL PRODUCTS</span>
+              <span className="text-gray-400 text-xs ml-2">{products.length} Products</span>
+            </div>
             {topCategories.map((category, index) => (
-              <div key={index} className="bg-gray-800 hover:bg-gray-700 transition-colors cursor-pointer px-4 py-2 rounded">
-                <span className="text-white text-sm font-medium">{category}</span>
+              <div 
+                key={index} 
+                onClick={() => handleCategoryClick(category)}
+                className={`cursor-pointer px-4 py-2 rounded transition-colors ${
+                  selectedCategory === category ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
+                }`}
+              >
+                <span className="text-sm font-medium">{category}</span>
                 <span className="text-gray-400 text-xs ml-2">
-                  {category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" ? "15" : 
-                   category === "SHOE PALLETS/TRUCKLOAD" ? "8" : 
-                   category === "MASSAGE CHAIR" ? "4" : 
-                   category === "CLOTHES" ? "3" : 
-                   category === "CHRISTMAS PALLET" ? "2" : 
-                   category === "SNEAKER PALLETS" ? "2" : 
-                   category === "TISSUE PAPER" ? "2" : 
-                   category === "TOOLS" ? "2" : 
-                   category === "UNCATEGORIZED" ? "7" : "1"} Product{(category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" || 
+                  {category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" ? "2" : 
+                   category === "SHOE PALLETS/TRUCKLOAD" ? "4" : 
+                   category === "MASSAGE CHAIR" ? "1" : 
+                   category === "CLOTHES" ? "1" : 
+                   category === "CHRISTMAS PALLET" ? "1" : 
+                   category === "SNEAKER PALLETS" ? "3" : 
+                   category === "TISSUE PAPER" ? "1" : 
+                   category === "TOOLS" ? "0" : 
+                   category === "UNCATEGORIZED" ? "3" : "1"} Product{(category === "ELECTRONIC PALLETS/TRUCKLOAD LIQUIDATION" || 
                    category === "SHOE PALLETS/TRUCKLOAD" || 
-                   category === "MASSAGE CHAIR" || 
-                   category === "CLOTHES" || 
-                   category === "CHRISTMAS PALLET" || 
                    category === "SNEAKER PALLETS" || 
-                   category === "TISSUE PAPER" || 
-                   category === "TOOLS" || 
                    category === "UNCATEGORIZED") ? "s" : ""}
                 </span>
               </div>
@@ -324,6 +353,10 @@ const Shop = () => {
                         <a 
                           href="#" 
                           className="text-blue-600 hover:text-blue-800 text-sm transition-colors"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleCategoryClick(category.name.toUpperCase());
+                          }}
                         >
                           {category.name}
                         </a>
@@ -403,9 +436,29 @@ const Shop = () => {
                 </div>
               </div>
 
+              {/* Product count and filter info */}
+              <div className="mb-6 flex justify-between items-center">
+                <p className="text-gray-600">
+                  Showing {filteredProducts.length} of {products.length} products
+                  {selectedCategory !== "ALL" && (
+                    <span className="ml-2 text-sm text-orange-600">
+                      - Filtered by: {selectedCategory}
+                    </span>
+                  )}
+                </p>
+                {selectedCategory !== "ALL" && (
+                  <button
+                    onClick={() => setSelectedCategory("ALL")}
+                    className="text-sm text-blue-600 hover:text-blue-800 underline"
+                  >
+                    Clear filter
+                  </button>
+                )}
+              </div>
+
               {/* Products Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {products.map((product) => (
+                {filteredProducts.map((product) => (
                   <Card key={product.id} className="group hover:shadow-lg transition-all duration-300 border">
                     <div className="relative overflow-hidden">
                       {product.discount > 0 && (
@@ -445,6 +498,20 @@ const Shop = () => {
                   </Card>
                 ))}
               </div>
+
+              {filteredProducts.length === 0 && (
+                <div className="text-center py-12">
+                  <p className="text-gray-500 text-lg mb-4">
+                    No products found in this category.
+                  </p>
+                  <button
+                    onClick={() => setSelectedCategory("ALL")}
+                    className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded"
+                  >
+                    View All Products
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
