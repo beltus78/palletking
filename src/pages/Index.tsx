@@ -14,10 +14,10 @@ const Index = () => {
       <main role="main">
         <HeroSection />
         <ProductCategories />
+        <AboutSection />
         <SaleProducts />
         <StoreOverstock />
         <Features />
-        <AboutSection />
       </main>
       <Footer />
     </div>
