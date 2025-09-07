@@ -75,15 +75,16 @@ const Cart = () => {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Header />
-      <main className="container mx-auto px-4 py-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h1 className="text-3xl font-bold">Shopping Cart</h1>
+        <Header />
+        <main className="container mx-auto px-4 py-4 md:py-8">
+          <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6 md:mb-8">
+            <h1 className="text-2xl md:text-3xl font-bold">Shopping Cart</h1>
             <Link to="/shop">
               <Button variant="outline" className="gap-2">
                 <ArrowLeft className="h-4 w-4" />
-                Continue Shopping
+                <span className="hidden sm:inline">Continue Shopping</span>
+                <span className="sm:hidden">Shop</span>
               </Button>
             </Link>
           </div>
@@ -93,9 +94,9 @@ const Cart = () => {
             <div className="lg:col-span-2 space-y-4">
               {items.map((item) => (
                 <Card key={item.id}>
-                  <CardContent className="p-6">
-                    <div className="flex gap-4">
-                      <div className="w-24 h-24 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
+                  <CardContent className="p-4 md:p-6">
+                    <div className="flex flex-col sm:flex-row gap-4">
+                      <div className="w-20 h-20 md:w-24 md:h-24 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0 mx-auto sm:mx-0">
                         <img
                           src={item.image}
                           alt={item.name}
@@ -103,15 +104,15 @@ const Cart = () => {
                         />
                       </div>
                       
-                      <div className="flex-1 min-w-0">
-                        <h3 className="font-semibold text-lg mb-1 truncate">
+                      <div className="flex-1 min-w-0 text-center sm:text-left">
+                        <h3 className="font-semibold text-base md:text-lg mb-1">
                           {item.name}
                         </h3>
                         <Badge variant="outline" className="mb-3">
                           {item.category}
                         </Badge>
                         
-                        <div className="flex items-center justify-between">
+                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                           <div className="flex items-center gap-3">
                             <Button
                               variant="outline"
