@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ShoppingCart, Search, Heart, Eye } from "lucide-react";
 import Header from "@/components/Header";
+import ShopProductGallery from "@/components/ShopProductGallery";
 import { useToast } from "@/components/ui/use-toast";
 
 interface Product {
@@ -289,12 +290,9 @@ const Shop = () => {
                         -{product.discount}%
                       </Badge>
                     )}
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300" />
+                    
+                    {/* Use ShopProductGallery for click to view details */}
+                    <ShopProductGallery product={product} />
                     
                     {/* Quick Actions */}
                     <div className="absolute top-2 right-2 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -305,13 +303,6 @@ const Shop = () => {
                         onClick={() => addToWishlist(product)}
                       >
                         <Heart className="h-4 w-4" />
-                      </Button>
-                      <Button
-                        size="sm"
-                        variant="secondary"
-                        className="h-8 w-8 p-0"
-                      >
-                        <Eye className="h-4 w-4" />
                       </Button>
                     </div>
                   </div>

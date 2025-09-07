@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useToast } from "@/hooks/use-toast";
 import { Heart, Search, Mail } from "lucide-react";
+import ProductGallery from "./ProductGallery";
 
 const AllForGarden = () => {
   const { toast } = useToast();
@@ -35,9 +36,19 @@ const AllForGarden = () => {
       currentPrice: 1000,
       discount: 33,
       description: "Step Into a New Level of Comfort and Style with Ultra-Lightweight, Breathable Footwear",
-      image: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=400&h=400&fit=crop", alt: "Cloud Walker front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&h=400&fit=crop", alt: "Cloud Walker side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1515347619252-60a4bf4fff4f?w=400&h=400&fit=crop", alt: "Cloud Walker back", angle: "Back View" }
+      ],
       isFeatured: true,
-      status: "New"
+      status: "New",
+      variations: [
+        { id: "cloud-white", color: "White", price: 1000, stock: 100 },
+        { id: "cloud-black", color: "Black", price: 1000, stock: 80 },
+        { id: "cloud-gray", color: "Gray", price: 1000, stock: 60 }
+      ],
+      availability: ["All Warehouses", "Direct Ship"]
     },
     {
       id: 2,
@@ -46,9 +57,18 @@ const AllForGarden = () => {
       currentPrice: 1000,
       discount: 17,
       description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. $1000 a pallet which contains 100 pairs",
-      image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop", alt: "Hoka Clifton front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400&h=400&fit=crop", alt: "Hoka Clifton side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1539185441755-769473a23570?w=400&h=400&fit=crop", alt: "Hoka Clifton back", angle: "Back View" }
+      ],
       isFeatured: true,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "hoka-mens", size: "Men's Sizes", price: 1000, stock: 50 },
+        { id: "hoka-womens", size: "Women's Sizes", price: 1000, stock: 50 }
+      ],
+      availability: ["Florida Warehouse", "Texas Distribution"]
     },
     {
       id: 3,
@@ -57,9 +77,18 @@ const AllForGarden = () => {
       currentPrice: 1000,
       discount: 0,
       description: "50 cups per pallet",
-      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop",
+      images: [
+        { url: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&h=400&fit=crop", alt: "Stanley Cup front", angle: "Front View" },
+        { url: "https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=400&h=400&fit=crop", alt: "Stanley Cup side", angle: "Side View" },
+        { url: "https://images.unsplash.com/photo-1549298916-acc8b4bc8b4e?w=400&h=400&fit=crop", alt: "Stanley Cup colors", angle: "Color Options" }
+      ],
       isFeatured: false,
-      status: "Available"
+      status: "Available",
+      variations: [
+        { id: "stanley-20oz", size: "20oz", price: 1000, stock: 30 },
+        { id: "stanley-30oz", size: "30oz", price: 1100, stock: 20 }
+      ],
+      availability: ["All Warehouses"]
     }
   ];
 
@@ -82,12 +111,12 @@ const AllForGarden = () => {
           {gardenProducts.map((product, index) => (
             <article 
               key={product.id} 
-              className="modern-card group hover:scale-[1.02] transition-all duration-300"
+              className="modern-card group"
               itemScope 
               itemType="https://schema.org/Product"
               itemProp="itemListElement"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative">
                 {/* Discount Badge */}
                 {product.discount && product.discount > 0 && (
                   <Badge className="absolute top-3 left-3 z-10 bg-destructive text-destructive-foreground px-3 py-1 text-sm font-bold rounded-xl">
@@ -107,47 +136,9 @@ const AllForGarden = () => {
                     NEW
                   </Badge>
                 )}
-                
-                {/* Product Image */}
-                <div className="relative overflow-hidden aspect-square modern-image">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                    itemProp="image"
-                    loading="lazy"
-                    onError={(e) => {
-                      e.currentTarget.src = `https://via.placeholder.com/400x400/f0f0f0/333333?text=${encodeURIComponent(product.name.slice(0, 20))}`;
-                    }}
-                  />
-                  
-                  {/* Hover Actions */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Quick view"
-                    >
-                      <Search className="h-5 w-5" />
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Email inquiry"
-                      onClick={() => sendProductInquiry(product)}
-                    >
-                      <Mail className="h-5 w-5" />
-                    </Button>
-                    <Button 
-                      size="sm" 
-                      className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" 
-                      aria-label="Add to wishlist"
-                      onClick={() => addToWishlist(product)}
-                    >
-                      <Heart className="h-5 w-5" />
-                    </Button>
-                  </div>
-                </div>
+
+                {/* Interactive Product Gallery */}
+                <ProductGallery product={product} />
               </div>
 
               <div className="p-4 sm:p-6">
