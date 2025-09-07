@@ -11,7 +11,7 @@ const StoreOverstock = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
           {/* Title */}
-          <h2 className="text-4xl font-bold text-center mb-12 text-foreground">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-12 text-foreground">
             Store Overstock
           </h2>
           

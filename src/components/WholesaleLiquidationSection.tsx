@@ -5,11 +5,11 @@ const WholesaleLiquidationSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
           Wholesale Liquidation Pallets
         </h2>
         
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
           Cosmetics, Health & Beauty items, Paper products, Household items, General Merchandise, Apparel, and more. Get started below
         </p>
 

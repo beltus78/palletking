@@ -5,11 +5,11 @@ const AboutPriceSection = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
           Buy The Best Products For An Excellent Wholesale Price.
         </h2>
         
-        <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+        <p className="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto mb-8 leading-relaxed">
           Save on wholesale purchases at Pallets Liquidation Center Deals! Now your business can make more profit on wholesale products offered by our verified wholesale suppliers.
         </p>
 

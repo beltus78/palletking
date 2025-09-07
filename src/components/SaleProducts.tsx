@@ -125,8 +125,8 @@ const SaleProducts = () => {
     <section className="modern-section bg-background" itemScope itemType="https://schema.org/ItemList">
       <div className="modern-container">
         <header className="text-center mb-12 lg:mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 text-balance">SALE PRODUCTS</h2>
-          <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto text-balance">
+          <h2 className="text-2xl lg:text-3xl font-bold text-foreground mb-6 text-balance">SALE PRODUCTS</h2>
+          <p className="text-base lg:text-lg text-muted-foreground max-w-4xl mx-auto text-balance">
             Wholesale liquidation pallets from top USA retailers. Customer returns, surplus inventory, shelf pulls, and overstock at unbeatable prices.
           </p>
         </header>

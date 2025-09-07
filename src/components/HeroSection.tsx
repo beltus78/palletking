@@ -10,11 +10,11 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-20 pb-16">
         <div className="text-center space-y-8">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight">
             We Sell Discounted Wholesale Merchandise
           </h1>
           
-          <p className="text-xl md:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl lg:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
             Specializing in closeouts, shelf pulls, customer returns, and liquidated merchandise. 
             We have what you need at the best prices. We sell by box, pallet, or truckload.
           </p>
