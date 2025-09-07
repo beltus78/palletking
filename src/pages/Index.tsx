@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import SaleProducts from "@/components/SaleProducts";
-import AboutSection from "@/components/AboutSection";
+import AllForGarden from "@/components/AllForGarden";
 import StoreOverstock from "@/components/StoreOverstock";
 import Features from "@/components/Features";
 import Footer from "@/components/Footer";
@@ -13,9 +13,9 @@ const Index = () => {
       <main role="main">
         <HeroSection />
         <SaleProducts />
-        <AboutSection />
-        <StoreOverstock />
         <Features />
+        <AllForGarden />
+        <StoreOverstock />
       </main>
       <Footer />
     </div>
