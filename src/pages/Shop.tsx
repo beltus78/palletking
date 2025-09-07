@@ -20,6 +20,7 @@ interface Product {
   discount: number;
   quantity: string;
   status: string;
+  shippingMethod: string;
   images?: { url: string; alt: string; angle: string }[];
 }
 
@@ -62,7 +63,6 @@ import toysCollection from "@/assets/products/toys-collection.jpg";
 import rugsCarpets from "@/assets/products/rugs-carpets.jpg";
 import generalMerchandise from "@/assets/products/general-merchandise.jpg";
 import massageChairs from "@/assets/products/massage-chairs.jpg";
-import logo from "@/assets/logo.png";
 
 const products: Product[] = [
   {
@@ -71,11 +71,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1200,
     image: adidasSneakersPallet,
-    description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class",
+    description: "Brand New Adidas sneakers sports shoes 200 pairs per pallet. All Authentic and first class. High-quality athletic footwear perfect for sports and casual wear.",
     category: "shoes",
     discount: 20,
     quantity: "200 pairs per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $1000, Standard shipping 5-7 business days, Express shipping 2-3 business days",
     images: [
       { url: adidasSneakersPallet, alt: "Adidas Sneakers Pallet", angle: "Product View" },
       { url: adidasVariety1, alt: "Adidas Collection", angle: "Variety View" },
@@ -88,11 +89,12 @@ const products: Product[] = [
     originalPrice: 500,
     salePrice: 300,
     image: inflatablePools,
-    description: "Transform your backyard into a summer paradise with a Inflatable Pool",
+    description: "Transform your backyard into a summer paradise with a Inflatable Pool. Perfect for families and outdoor entertaining.",
     category: "outdoor",
     discount: 40,
     quantity: "224 pallets available",
     status: "Available",
+    shippingMethod: "Standard shipping 3-5 business days, Freight delivery available for large orders",
     images: [
       { url: inflatablePools, alt: "Inflatable Pools Pallet", angle: "Product View" },
       { url: poolsVariety1, alt: "Pool Collection", angle: "Variety View" }
@@ -104,11 +106,12 @@ const products: Product[] = [
     originalPrice: 1000,
     salePrice: 800,
     image: diapersPallet,
-    description: "High-quality all good diapers pallets from well-known brands",
+    description: "High-quality all good diapers pallets from well-known brands. Ultra-absorbent and gentle on sensitive skin.",
     category: "baby",
     discount: 20,
     quantity: "200 pieces per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $500, Standard delivery 2-4 business days",
     images: [
       { url: diapersPallet, alt: "Diapers Pallet", angle: "Product View" },
       { url: diapersVariety1, alt: "Diaper Collection", angle: "Variety View" }
@@ -120,11 +123,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1000,
     image: adidasSneakers,
-    description: "American lifestyle brand that are durable shoes thanks to high quality materials",
+    description: "American lifestyle brand that are durable shoes thanks to high quality materials. Classic design meets modern comfort.",
     category: "shoes",
     discount: 33,
     quantity: "100 pairs per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $1000, Express delivery 1-2 business days available",
     images: [
       { url: adidasSneakers, alt: "All Star Shoes", angle: "Product View" },
       { url: allstarVariety1, alt: "All Star Collection", angle: "Variety View" }
@@ -136,11 +140,12 @@ const products: Product[] = [
     originalPrice: 500,
     salePrice: 300,
     image: toiletPaper,
-    description: "Premium 2-Ply Embossed Toilet Paper by GP PRO (Georgia-Pacific)",
+    description: "Premium 2-Ply Embossed Toilet Paper by GP PRO (Georgia-Pacific). Commercial grade quality for everyday use.",
     category: "paper",
     discount: 40,
     quantity: "80 Rolls Per Case",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Standard shipping 2-3 business days, Bulk delivery options available"
   },
   {
     id: 6,
@@ -148,11 +153,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1000,
     image: cloudWalkerNew,
-    description: "Ultra-Lightweight, Breathable Footwear Designed for Everyday Wear",
+    description: "Ultra-Lightweight, Breathable Footwear Designed for Everyday Wear. Perfect for all-day comfort and style.",
     category: "shoes",
     discount: 33,
     quantity: "100 pairs per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $1000, Next-day delivery in select areas",
     images: [
       { url: cloudWalkerNew, alt: "Cloud Walker Shoes", angle: "Product View" },
       { url: cloudWalkerVariety1, alt: "Cloud Walker Collection", angle: "Variety View" }
@@ -164,11 +170,12 @@ const products: Product[] = [
     originalPrice: 1200,
     salePrice: 1000,
     image: hokaNew,
-    description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes",
+    description: "Experience top-tier comfort and performance with lightweight, cushioned running shoes. Professional athlete grade quality.",
     category: "shoes",
     discount: 17,
     quantity: "100 pairs per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on all orders, Express delivery 1-3 business days",
     images: [
       { url: hokaNew, alt: "Hoka Clifton Shoes", angle: "Product View" },
       { url: hokaVariety1, alt: "Hoka Collection", angle: "Variety View" }
@@ -180,11 +187,12 @@ const products: Product[] = [
     originalPrice: 1000,
     salePrice: 1000,
     image: stanleyCupNew,
-    description: "Premium Stanley Cup collection for your beverage needs",
+    description: "Premium Stanley Cup collection for your beverage needs. Durable, insulated drinkware for any adventure.",
     category: "accessories",
     discount: 0,
     quantity: "50 cups per pallet",
     status: "Available",
+    shippingMethod: "Standard shipping 2-4 business days, Same-day delivery in major cities",
     images: [
       { url: stanleyCupNew, alt: "Stanley Cup Pallet", angle: "Product View" },
       { url: stanleyVariety1, alt: "Stanley Cup Collection", angle: "Variety View" },
@@ -197,11 +205,12 @@ const products: Product[] = [
     originalPrice: 500,
     salePrice: 500,
     image: sheinDress,
-    description: "Trendy, chic, and affordable dresses. Elevate your style effortlessly",
+    description: "Trendy, chic, and affordable dresses. Elevate your style effortlessly with fashionable designs for every occasion.",
     category: "clothing",
     discount: 0,
     quantity: "200 pieces per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $300, Standard delivery 3-5 business days",
     images: [
       { url: sheinDress, alt: "Shein Dress", angle: "Product View" },
       { url: sheinVariety1, alt: "Shein Collection", angle: "Variety View" }
@@ -213,11 +222,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1000,
     image: appleWatchNew,
-    description: "Latest Series 8 Apple Watch collection",
+    description: "Latest Series 8 Apple Watch collection. Advanced health monitoring and fitness tracking capabilities.",
     category: "electronics",
     discount: 33,
     quantity: "100 pieces per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $800, Overnight delivery available",
     images: [
       { url: appleWatchNew, alt: "Apple Watch Series 8", angle: "Product View" },
       { url: appleWatchVariety1, alt: "Apple Watch Collection", angle: "Variety View" },
@@ -230,11 +240,12 @@ const products: Product[] = [
     originalPrice: 1200,
     salePrice: 1000,
     image: cloudWalkerShoes,
-    description: "Premium fragrance collection from top brands",
+    description: "Premium fragrance collection from top brands. Luxurious scents for every personality and occasion.",
     category: "beauty",
     discount: 17,
     quantity: "200 pieces per pallet",
     status: "Available",
+    shippingMethod: "Standard shipping 2-4 business days, Gift wrapping available",
     images: [
       { url: cloudWalkerShoes, alt: "Perfume Pallet", angle: "Product View" },
       { url: perfumeVariety1, alt: "Perfume Collection", angle: "Variety View" }
@@ -246,11 +257,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1200,
     image: nikeBasketball,
-    description: "High-quality Nike basketball shoes in various sizes",
+    description: "High-quality Nike basketball shoes in various sizes. Professional grade performance for serious athletes.",
     category: "shoes",
     discount: 20,
     quantity: "150 pairs per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $1000, Priority delivery 1-2 business days",
     images: [
       { url: nikeBasketball, alt: "Nike Basketball Shoes", angle: "Product View" },
       { url: nikeVariety1, alt: "Nike Collection", angle: "Variety View" },
@@ -263,11 +275,12 @@ const products: Product[] = [
     originalPrice: 800,
     salePrice: 600,
     image: sheinDress,
-    description: "Festive Christmas decorations and ornaments",
+    description: "Festive Christmas decorations and ornaments. Create magical holiday moments with premium decorative items.",
     category: "seasonal",
     discount: 25,
     quantity: "Mixed items per pallet",
     status: "Available",
+    shippingMethod: "Standard shipping 3-5 business days, Holiday express delivery available",
     images: [
       { url: sheinDress, alt: "Christmas Decorations", angle: "Product View" },
       { url: christmasVariety1, alt: "Christmas Collection", angle: "Variety View" }
@@ -279,11 +292,12 @@ const products: Product[] = [
     originalPrice: 2000,
     salePrice: 1500,
     image: appleWatchNew,
-    description: "Mixed electronics including phones, tablets, and accessories",
+    description: "Mixed electronics including phones, tablets, and accessories. Latest technology products from trusted brands.",
     category: "electronics",
     discount: 25,
     quantity: "Mixed electronics per pallet",
     status: "Available",
+    shippingMethod: "Free shipping on orders over $1200, Insured delivery with tracking",
     images: [
       { url: appleWatchNew, alt: "Electronics Pallet", angle: "Product View" },
       { url: electronicsVariety1, alt: "Electronics Collection", angle: "Variety View" },
@@ -296,11 +310,12 @@ const products: Product[] = [
     originalPrice: 3000,
     salePrice: 2500,
     image: massageChairs,
-    description: "Premium massage chairs with multiple settings",
+    description: "Premium massage chairs with multiple settings. Ultimate relaxation with advanced therapeutic features.",
     category: "furniture",
     discount: 17,
     quantity: "1-2 chairs per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "White glove delivery service, Professional installation included"
   },
   {
     id: 16,
@@ -308,11 +323,12 @@ const products: Product[] = [
     originalPrice: 4000,
     salePrice: 3200,
     image: macbookCollection,
-    description: "Latest MacBook Pro M2 13-inch and 15-inch models",
+    description: "Latest MacBook Pro M2 13-inch and 15-inch models. Professional computing power for creative professionals.",
     category: "macbook",
     discount: 20,
     quantity: "10 units per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Free expedited shipping, Apple Care+ enrollment available"
   },
   {
     id: 17,
@@ -320,11 +336,12 @@ const products: Product[] = [
     originalPrice: 3000,
     salePrice: 2400,
     image: macbookCollection,
-    description: "MacBook Air M1 in Space Gray, Silver, and Gold",
+    description: "MacBook Air M1 in Space Gray, Silver, and Gold. Lightweight design with all-day battery life.",
     category: "macbook",
     discount: 20,
     quantity: "15 units per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Free shipping with signature confirmation, Setup assistance available"
   },
   {
     id: 18,
@@ -332,11 +349,12 @@ const products: Product[] = [
     originalPrice: 800,
     salePrice: 600,
     image: mensClothing,
-    description: "Mixed men's clothing including shirts, pants, jackets",
+    description: "Mixed men's clothing including shirts, pants, jackets. Quality fashion for the modern gentleman.",
     category: "mens-clothing",
     discount: 25,
     quantity: "100 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Standard shipping 3-5 business days, Returns accepted within 30 days"
   },
   {
     id: 19,
@@ -344,11 +362,12 @@ const products: Product[] = [
     originalPrice: 900,
     salePrice: 700,
     image: womensClothing,
-    description: "Trendy women's clothing - dresses, tops, bottoms",
+    description: "Trendy women's clothing - dresses, tops, bottoms. Latest fashion trends for every style preference.",
     category: "womens-clothing",
     discount: 22,
     quantity: "120 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Free shipping on orders over $500, Express delivery available"
   },
   {
     id: 20,
@@ -356,11 +375,12 @@ const products: Product[] = [
     originalPrice: 600,
     salePrice: 450,
     image: kidsClothing,
-    description: "Children's clothing in various sizes and styles",
+    description: "Children's clothing in various sizes and styles. Comfortable, durable apparel for active kids.",
     category: "kids-clothing",
     discount: 25,
     quantity: "150 pieces per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Standard shipping 2-4 business days, Size exchange program available"
   },
   {
     id: 21,
@@ -368,11 +388,12 @@ const products: Product[] = [
     originalPrice: 1200,
     salePrice: 900,
     image: toolsHardware,
-    description: "Mixed tools, hardware, and equipment",
+    description: "Mixed tools, hardware, and equipment. Professional-grade tools for contractors and DIY enthusiasts.",
     category: "tools",
     discount: 25,
     quantity: "50 tools per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Freight delivery for heavy items, Tool warranty included"
   },
   {
     id: 22,
@@ -380,11 +401,12 @@ const products: Product[] = [
     originalPrice: 800,
     salePrice: 600,
     image: toysCollection,
-    description: "Children's toys, games, and educational items",
+    description: "Children's toys, games, and educational items. Safe, fun, and educational playtime essentials.",
     category: "toys",
     discount: 25,
     quantity: "100 toys per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Standard shipping 3-5 business days, Gift wrapping services available"
   },
   {
     id: 23,
@@ -392,11 +414,12 @@ const products: Product[] = [
     originalPrice: 1000,
     salePrice: 750,
     image: perfumeVariety1,
-    description: "Mixed cosmetics, skincare, and beauty products",
+    description: "Mixed cosmetics, skincare, and beauty products. Premium beauty essentials from leading brands.",
     category: "beauty",
     discount: 25,
     quantity: "200 items per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Climate-controlled shipping, Free samples with orders over $500"
   },
   {
     id: 24,
@@ -404,11 +427,12 @@ const products: Product[] = [
     originalPrice: 1500,
     salePrice: 1200,
     image: rugsCarpets,
-    description: "Various sizes and styles of rugs and carpets",
+    description: "Various sizes and styles of rugs and carpets. Transform your space with quality floor coverings.",
     category: "rugs",
     discount: 20,
     quantity: "20 rugs per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Freight delivery for large items, Professional installation available"
   },
   {
     id: 25,
@@ -416,36 +440,37 @@ const products: Product[] = [
     originalPrice: 1000,
     salePrice: 800,
     image: generalMerchandise,
-    description: "Mixed general merchandise from major retailers",
+    description: "Mixed general merchandise from major retailers. Diverse selection of everyday essentials and specialty items.",
     category: "general",
     discount: 20,
     quantity: "Mixed items per pallet",
-    status: "Available"
+    status: "Available",
+    shippingMethod: "Standard shipping 4-6 business days, Manifest list included"
   }
 ];
 
 const categories = [
-  { name: "Christmas Pallet", count: 2 },
-  { name: "Clothes", count: 3 },
-  { name: "Electronic Pallets/Truckload Liquidation", count: 15 },
-  { name: "General Merchandise", count: 1 },
-  { name: "Housewares", count: 1 },
-  { name: "Improvement Liquidation", count: 1 },
-  { name: "Kids Wholesale Clothing", count: 1 },
-  { name: "Mac Book", count: 1 },
-  { name: "Massage Chair", count: 4 },
-  { name: "Men's Clothing Pallet", count: 1 },
-  { name: "Mix Cosmetic", count: 1 },
-  { name: "Mixed Accessories Liquidation", count: 1 },
-  { name: "Mystery Boxes", count: 1 },
-  { name: "Rugs and Carpet", count: 1 },
-  { name: "Sex Toys", count: 1 },
-  { name: "Shoe Pallets/Truckload", count: 8 },
-  { name: "Sneaker Pallets", count: 2 },
-  { name: "Tissue Paper", count: 2 },
-  { name: "Tools", count: 2 },
-  { name: "Toys Pallets/Truckload", count: 1 },
-  { name: "Women Clothing", count: 1 }
+  { name: "Christmas Pallet" },
+  { name: "Clothes" },
+  { name: "Electronic Pallets/Truckload Liquidation" },
+  { name: "General Merchandise" },
+  { name: "Housewares" },
+  { name: "Improvement Liquidation" },
+  { name: "Kids Wholesale Clothing" },
+  { name: "Mac Book" },
+  { name: "Massage Chair" },
+  { name: "Men's Clothing Pallet" },
+  { name: "Mix Cosmetic" },
+  { name: "Mixed Accessories Liquidation" },
+  { name: "Mystery Boxes" },
+  { name: "Rugs and Carpet" },
+  { name: "Sex Toys" },
+  { name: "Shoe Pallets/Truckload" },
+  { name: "Sneaker Pallets" },
+  { name: "Tissue Paper" },
+  { name: "Tools" },
+  { name: "Toys Pallets/Truckload" },
+  { name: "Women Clothing" }
 ];
 
 const topCategories = [
@@ -526,22 +551,20 @@ const Shop = () => {
           <div className="flex flex-wrap justify-center gap-4 mb-12">
               <div 
                 onClick={() => handleCategoryClick("ALL")}
-                className={`cursor-pointer px-4 py-2 rounded transition-colors flex items-center gap-2 ${
+                className={`cursor-pointer px-4 py-2 rounded transition-colors ${
                   selectedCategory === "ALL" ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
                 }`}
               >
-                <img src={logo} alt="Logo" className="w-5 h-5" />
                 <span className="text-sm font-medium">ALL PRODUCTS</span>
               </div>
             {topCategories.map((category, index) => (
               <div 
                 key={index} 
                 onClick={() => handleCategoryClick(category)}
-                className={`cursor-pointer px-4 py-2 rounded transition-colors flex items-center gap-2 ${
+                className={`cursor-pointer px-4 py-2 rounded transition-colors ${
                   selectedCategory === category ? "bg-orange-500 text-white" : "bg-gray-800 hover:bg-gray-700 text-white"
                 }`}
               >
-                <img src={logo} alt="Logo" className="w-5 h-5" />
                 <span className="text-sm font-medium">{category}</span>
               </div>
             ))}
@@ -690,6 +713,14 @@ const Shop = () => {
                       <h3 className="font-semibold text-sm text-gray-900 mb-2 line-clamp-2 group-hover:text-blue-600 transition-colors">
                         {product.name}
                       </h3>
+                      
+                      <p className="text-xs text-gray-600 mb-2 line-clamp-2">
+                        {product.description}
+                      </p>
+                      
+                      <p className="text-xs text-green-600 mb-3">
+                        {product.shippingMethod}
+                      </p>
                       
                       <div className="flex items-center gap-2 mb-3">
                         {product.originalPrice !== product.salePrice && (
