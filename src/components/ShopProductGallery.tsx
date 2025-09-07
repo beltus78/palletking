@@ -47,7 +47,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
 
   // Create default images if not provided
   const productImages = product.images || [
-    { url: `https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop`, alt: product.name, angle: "Product View" }
+    { url: (product as any).image || `https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=400&fit=crop`, alt: product.name, angle: "Product View" }
   ];
 
   const nextImage = () => {
