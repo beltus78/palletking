@@ -2,8 +2,64 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { Package, Headphones, CreditCard, Truck } from "lucide-react";
 import logoOriginal from "@/assets/logo-original.png";
+import lenovoLogo from "@/assets/logos/lenovo-logo.png";
+import amazonLogo from "@/assets/logos/amazon-logo.png";
+import walmartLogo from "@/assets/logos/walmart-original.png";
+import lowesLogo from "@/assets/logos/lowes-original.png";
+import samsClubLogo from "@/assets/logos/samsclub-original.png";
+import majorRetailerLogo from "@/assets/logos/major-retailer.png";
 
 const Footer = () => {
+  // Retailer partner logos - exactly from your original website
+  const retailerLogos = [
+    {
+      name: "Walmart",
+      logo: walmartLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004c91'%3EWalmart%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Lowe's",
+      logo: lowesLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23004990'%3ELowe's%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Sam's Club",
+      logo: samsClubLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23004c91'%3ESam's Club%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Major Retailer",
+      logo: majorRetailerLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23333333'%3EMajor Retailer%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Amazon",
+      logo: amazonLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Ctext x='20' y='45' font-family='Arial,sans-serif' font-size='28' font-weight='bold' fill='%23ff9900'%3EAmazon%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Lenovo",
+      logo: lenovoLogo,
+      fallback: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 60'%3E%3Ctext x='10' y='35' font-family='Arial,sans-serif' font-size='24' font-weight='bold' fill='%23e2001a'%3ELenovo%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Target",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ccircle cx='100' cy='100' r='95' fill='%23cc0000'/%3E%3Ccircle cx='100' cy='100' r='75' fill='%23ffffff'/%3E%3Ccircle cx='100' cy='100' r='55' fill='%23cc0000'/%3E%3Ccircle cx='100' cy='100' r='35' fill='%23ffffff'/%3E%3Ccircle cx='100' cy='100' r='15' fill='%23cc0000'/%3E%3C/svg%3E"
+    },
+    {
+      name: "Best Buy",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 300 100'%3E%3Crect width='300' height='100' fill='%23003876'/%3E%3Ctext x='20' y='35' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23ffcc00'%3EBest%3C/text%3E%3Ctext x='80' y='35' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23ffffff'%3EBuy%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Home Depot",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100'%3E%3Crect width='200' height='100' fill='%23f96302'/%3E%3Ctext x='15' y='30' font-family='Arial,sans-serif' font-size='14' font-weight='bold' fill='%23ffffff'%3ETHE HOME%3C/text%3E%3Ctext x='15' y='50' font-family='Arial,sans-serif' font-size='14' font-weight='bold' fill='%23ffffff'%3EDEPOT%3C/text%3E%3C/svg%3E"
+    },
+    {
+      name: "Macy's",
+      logo: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Ctext x='20' y='45' font-family='serif' font-size='32' font-weight='bold' fill='%23e21837'%3Emacy's%3C/text%3E%3C/svg%3E"
+    }
+  ];
+
   return (
     <footer className="bg-gray-900 text-white" role="contentinfo">
       {/* Feature Section - Matching original website */}
@@ -61,6 +117,37 @@ const Footer = () => {
         </div>
       </section>
 
+      {/* Retailer Partners Section */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4">
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">
+            Our Retail Partners & Sources
+          </h3>
+          <p className="text-center text-gray-600 mb-8">
+            We source liquidation pallets directly from top USA retailers
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 items-center">
+            {retailerLogos.map((retailer, index) => (
+              <div key={index} className="flex items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <img
+                  src={retailer.logo}
+                  alt={`${retailer.name} logo`}
+                  className="h-8 w-auto max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                  onError={(e) => {
+                    if (retailer.fallback) {
+                      e.currentTarget.src = retailer.fallback;
+                    }
+                  }}
+                />
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-gray-500 text-sm mt-6">
+            * We source from these and many other major retailers across the USA
+          </p>
+        </div>
+      </section>
+
       {/* Main Footer */}
       <div className="py-12">
         <div className="max-w-7xl mx-auto px-4">
@@ -73,7 +160,7 @@ const Footer = () => {
                   alt="My Pallet Liquidation Center" 
                   className="h-12 w-auto"
                   onError={(e) => {
-                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Crect width='60' height='60' x='10' y='10' rx='30' fill='%23f59e0b'/%3E%3Ctext x='40' y='45' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EP%3C/text%3E%3Ctext x='85' y='25' fill='%23f59e0b' font-size='14' font-weight='bold'%3EPALLETS LIQUIDATION%3C/text%3E%3Ctext x='85' y='45' fill='%23f59e0b' font-size='14' font-weight='bold'%3ECENTER%3C/text%3E%3C/svg%3E";
+                    e.currentTarget.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='%23f59e0b'/%3E%3Ctext x='40' y='48' text-anchor='middle' fill='white' font-size='24' font-weight='bold'%3EP%3C/text%3E%3Ctext x='85' y='25' fill='%23f59e0b' font-size='14' font-weight='bold'%3EPALLETS LIQUIDATION%3C/text%3E%3Ctext x='85' y='45' fill='%23f59e0b' font-size='14' font-weight='bold'%3ECENTER%3C/text%3E%3C/svg%3E";
                   }}
                 />
               </Link>
