@@ -8,12 +8,12 @@ import logo from "@/assets/logo.png";
 
 const Header = () => {
   return (
-    <>
+    <header role="banner">
       {/* Top Bar - Dark navy like original */}
       <div className="bg-navy-main text-white py-2 px-4 text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <span>Phone: +1(541)-515-7780</span>
+            <span itemProp="telephone">Phone: +1(541)-515-7780</span>
           </div>
           <div className="flex items-center space-x-6">
             <Link to="/contact" className="hover:text-orange-main transition-colors">CONTACT US</Link>
@@ -34,7 +34,7 @@ const Header = () => {
       </div>
 
       {/* Main Header - White background like original */}
-      <header className="bg-white border-b border-gray-200 py-4 px-4 sticky top-0 z-50">
+      <div className="bg-white border-b border-gray-200 py-4 px-4 sticky top-0 z-50">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between mb-4">
             {/* Logo */}
@@ -99,7 +99,7 @@ const Header = () => {
           </div>
 
           {/* Navigation - Orange background like original */}
-          <nav className="bg-orange-main py-3 -mx-4 px-4">
+          <nav className="bg-orange-main py-3 -mx-4 px-4" role="navigation" aria-label="Main navigation">
             <div className="flex items-center justify-center space-x-8">
               <Link to="/" className="text-white font-semibold hover:text-gray-200 transition-colors">HOME</Link>
               <Link to="/shop" className="text-white font-semibold hover:text-gray-200 transition-colors">SHOP</Link>
@@ -111,8 +111,8 @@ const Header = () => {
             </div>
           </nav>
         </div>
-      </header>
-    </>
+      </div>
+    </header>
   );
 };
 
