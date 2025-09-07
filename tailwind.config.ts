@@ -57,9 +57,6 @@ export default {
 				'hero-bg': 'hsl(var(--hero-bg))',
 				'business-gray': 'hsl(var(--business-gray))',
 				'light-gray': 'hsl(var(--light-gray))',
-				'navy-main': 'hsl(var(--navy-main))',
-				'orange-main': 'hsl(var(--orange-main))',
-				'orange-600': 'hsl(39 100% 55%)',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -74,11 +71,21 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: 'calc(var(--radius) + 4px)',
+				'2xl': 'calc(var(--radius) + 8px)'
 			},
 			boxShadow: {
-				'business': '0 4px 20px hsl(var(--primary) / 0.15)',
-				'card': '0 2px 10px hsl(215 25% 27% / 0.1)'
+				'sm': 'var(--shadow-sm)',
+				'md': 'var(--shadow-md)',
+				'lg': 'var(--shadow-lg)',
+				'xl': 'var(--shadow-xl)',
+				'2xl': 'var(--shadow-2xl)'
+			},
+			spacing: {
+				'18': '4.5rem',
+				'88': '22rem',
+				'128': '32rem'
 			},
 			keyframes: {
 				'accordion-down': {

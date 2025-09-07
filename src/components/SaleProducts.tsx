@@ -122,20 +122,20 @@ const SaleProducts = () => {
   ];
 
   return (
-    <section className="py-16 bg-gray-50" itemScope itemType="https://schema.org/ItemList">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <header className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 uppercase tracking-wide">SALE PRODUCTS</h2>
-          <p className="text-gray-600 max-w-3xl mx-auto">
+    <section className="modern-section bg-background" itemScope itemType="https://schema.org/ItemList">
+      <div className="modern-container">
+        <header className="text-center mb-12 lg:mb-16">
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6 text-balance">SALE PRODUCTS</h2>
+          <p className="text-lg lg:text-xl text-muted-foreground max-w-4xl mx-auto text-balance">
             Wholesale liquidation pallets from top USA retailers. Customer returns, surplus inventory, shelf pulls, and overstock at unbeatable prices.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="modern-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {products.map((product, index) => (
             <article 
               key={product.id} 
-              className="group bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 overflow-hidden"
+              className="modern-card group hover:scale-[1.02] transition-all duration-300"
               itemScope 
               itemType="https://schema.org/Product"
               itemProp="itemListElement"
@@ -143,7 +143,7 @@ const SaleProducts = () => {
               <div className="relative overflow-hidden">
                 {/* Discount Badge */}
                 {product.discount && (
-                  <Badge className="absolute top-3 left-3 z-10 bg-red-500 text-white px-2 py-1 text-sm font-bold">
+                  <Badge className="absolute top-3 left-3 z-10 bg-destructive text-destructive-foreground px-3 py-1 text-sm font-bold rounded-xl">
                     -{product.discount}%
                   </Badge>
                 )}
@@ -152,7 +152,7 @@ const SaleProducts = () => {
                 {product.featured && product.badges && (
                   <div className="absolute top-3 right-3 z-10 flex flex-col gap-1">
                     {product.badges.map((badge, badgeIndex) => (
-                      <Badge key={badgeIndex} className="bg-orange-main text-white px-2 py-1 text-xs font-bold">
+                      <Badge key={badgeIndex} className="bg-accent text-accent-foreground px-3 py-1 text-xs font-bold rounded-xl">
                         {badge}
                       </Badge>
                     ))}
@@ -160,11 +160,11 @@ const SaleProducts = () => {
                 )}
                 
                 {/* Product Image */}
-                <div className="relative overflow-hidden aspect-square">
+                <div className="relative overflow-hidden aspect-square modern-image">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     itemProp="image"
                     loading="lazy"
                     onError={(e) => {
@@ -173,49 +173,49 @@ const SaleProducts = () => {
                   />
                   
                   {/* Hover Actions */}
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-2">
-                    <Button size="sm" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100" aria-label="Quick view">
-                      <Search className="h-4 w-4" />
+                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center gap-3">
+                    <Button size="sm" className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" aria-label="Quick view">
+                      <Search className="h-5 w-5" />
                     </Button>
-                    <Button size="sm" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100" aria-label="Add to wishlist">
-                      <Heart className="h-4 w-4" />
+                    <Button size="sm" className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" aria-label="Add to wishlist">
+                      <Heart className="h-5 w-5" />
                     </Button>
-                    <Button size="sm" variant="secondary" className="bg-white text-gray-900 hover:bg-gray-100" aria-label="Add to cart">
-                      <ShoppingCart className="h-4 w-4" />
+                    <Button size="sm" className="modern-button bg-background text-foreground hover:bg-accent hover:text-accent-foreground rounded-full w-12 h-12 p-0" aria-label="Add to cart">
+                      <ShoppingCart className="h-5 w-5" />
                     </Button>
                   </div>
                 </div>
               </div>
 
-              <div className="p-4">
-                <h3 className="font-semibold text-lg mb-2 line-clamp-2 text-gray-900 leading-tight" itemProp="name">
+              <div className="p-4 sm:p-6">
+                <h3 className="font-bold text-lg lg:text-xl mb-3 line-clamp-2 text-foreground leading-tight" itemProp="name">
                   {product.name}
                 </h3>
                 
-                <div className="flex items-center gap-2 mb-3" itemProp="offers" itemScope itemType="https://schema.org/Offer">
+                <div className="flex items-center gap-3 mb-4" itemProp="offers" itemScope itemType="https://schema.org/Offer">
                   {product.originalPrice && (
-                    <span className="text-gray-500 line-through text-sm">
+                    <span className="text-muted-foreground line-through text-base">
                       ${product.originalPrice.toFixed(2)}
                     </span>
                   )}
-                  <span className="text-red-600 font-bold text-lg" itemProp="price">
+                  <span className="text-accent font-bold text-xl" itemProp="price">
                     ${product.currentPrice.toFixed(2)}
                   </span>
                   <meta itemProp="priceCurrency" content="USD" />
                   <meta itemProp="availability" content="https://schema.org/InStock" />
                 </div>
 
-                <p className="text-gray-600 text-sm mb-4 line-clamp-3" itemProp="description">
+                <p className="text-muted-foreground text-sm mb-6 line-clamp-3 leading-relaxed" itemProp="description">
                   {product.description}
                 </p>
 
-                <div className="flex gap-2">
-                  <Button size="sm" variant="outline" className="flex-1 text-xs hover:bg-gray-50">
-                    <Heart className="h-3 w-3 mr-1" />
-                    Add to wishlist
+                <div className="flex gap-3">
+                  <Button size="sm" variant="outline" className="flex-1 text-sm hover:bg-muted rounded-xl">
+                    <Heart className="h-4 w-4 mr-2" />
+                    Wishlist
                   </Button>
-                  <Button size="sm" className="flex-1 bg-orange-main hover:bg-orange-600 text-white text-xs">
-                    <Plus className="h-3 w-3 mr-1" />
+                  <Button size="sm" className="flex-1 modern-button-primary text-sm rounded-xl">
+                    <Plus className="h-4 w-4 mr-2" />
                     Add to cart
                   </Button>
                 </div>
@@ -224,9 +224,9 @@ const SaleProducts = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 lg:mt-16">
           <Link to="/shop">
-            <Button className="bg-orange-main hover:bg-orange-600 text-white px-8 py-3 font-semibold text-lg">
+            <Button className="modern-button modern-button-primary text-lg px-10 py-4">
               VIEW ALL PRODUCTS
             </Button>
           </Link>
