@@ -26,7 +26,7 @@ const Contact = () => {
     // Create mailto link for direct email sending
     const subject = `Contact Form: ${formData.subject}`;
     const body = `Name: ${formData.name}%0D%0AEmail: ${formData.email}%0D%0APhone: ${formData.phone}%0D%0A%0D%0AMessage:%0D%0A${formData.message}`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     // Open email client
     window.location.href = mailtoLink;
@@ -77,27 +77,6 @@ const Contact = () => {
                 <h2 className="text-3xl font-bold mb-8 text-orange-main">CONTACT US</h2>
                 
                 <div className="space-y-6 mb-8">
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-main/10 rounded-lg flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-orange-main" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Phone</h3>
-                      <p className="text-gray-600">+1(541)-515-7780</p>
-                      <p className="text-sm text-gray-500">Available 24/7</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-orange-main/10 rounded-lg flex items-center justify-center">
-                      <Phone className="h-6 w-6 text-orange-main" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">WhatsApp</h3>
-                      <p className="text-gray-600">+1(541)-515-7780</p>
-                      <p className="text-sm text-gray-500">Quick response guaranteed</p>
-                    </div>
-                  </div>
                   
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-orange-main/10 rounded-lg flex items-center justify-center">
@@ -105,7 +84,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
-                      <p className="text-gray-600">info@mypalletliquidationcenter.com</p>
+                      <p className="text-gray-600">palletkingmj01@gmail.com</p>
                       <p className="text-sm text-gray-500">We'll respond within 24 hours</p>
                     </div>
                   </div>

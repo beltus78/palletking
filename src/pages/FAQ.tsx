@@ -174,25 +174,21 @@ const FAQ = () => {
                 </p>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div className="text-center p-6 border rounded-lg">
-                    <Phone className="h-8 w-8 text-primary mx-auto mb-4" />
-                    <h3 className="font-semibold mb-2">Call Us</h3>
-                    <p className="text-muted-foreground mb-4">
-                      Speak directly with our team
-                    </p>
-                    <Button variant="outline" size="sm">
-                      +1(541)-515-7780
-                    </Button>
-                  </div>
-                  
-                  <div className="text-center p-6 border rounded-lg">
+                <div className="flex justify-center">
+                  <div className="text-center p-6 border rounded-lg max-w-md">
                     <Mail className="h-8 w-8 text-primary mx-auto mb-4" />
                     <h3 className="font-semibold mb-2">Email Us</h3>
                     <p className="text-muted-foreground mb-4">
                       Get detailed answers via email
                     </p>
-                    <Button variant="outline" size="sm">
+                    <Button 
+                      variant="outline" 
+                      size="sm"
+                      onClick={() => {
+                        const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=FAQ Inquiry&body=Hi, I have a question about your liquidation pallets...`;
+                        window.location.href = mailtoLink;
+                      }}
+                    >
                       Send Message
                     </Button>
                   </div>

@@ -63,7 +63,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
     const variation = selectedVariation ? ` (${selectedVariation.size || selectedVariation.color})` : '';
     const subject = `Inquiry about ${product.name}${variation}`;
     const body = `Hi, I'm interested in the ${product.name}${variation} priced at $${selectedVariation?.price || product.salePrice}.%0D%0A%0D%0APlease provide more information about:%0D%0A- Availability%0D%0A- Shipping options%0D%0A- Bulk pricing%0D%0A%0D%0AThank you!`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     window.location.href = mailtoLink;
     
@@ -84,7 +84,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
     const variation = selectedVariation ? ` (${selectedVariation.size || selectedVariation.color})` : '';
     const subject = `Product Inquiry - ${product.name}${variation}`;
     const body = `Hi, I'm interested in the following product:%0D%0A%0D%0AProduct: ${product.name}${variation}%0D%0APrice: $${selectedVariation?.price || product.salePrice}%0D%0ADescription: ${product.description}%0D%0A%0D%0APlease provide more information about availability and shipping details.%0D%0A%0D%0AThank you!`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     window.location.href = mailtoLink;
     
@@ -267,7 +267,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
             )}
 
             {/* Action Buttons */}
-            <div className="flex gap-3 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Button 
                 onClick={addToWishlist}
                 variant="outline" 
@@ -278,15 +278,7 @@ const ShopProductGallery = ({ product }: ShopProductGalleryProps) => {
               </Button>
               <Button 
                 onClick={sendEmailInquiry}
-                variant="outline" 
-                className="flex-1"
-              >
-                <Mail className="h-4 w-4 mr-2" />
-                Email Inquiry
-              </Button>
-              <Button 
-                onClick={sendEmailInquiry}
-                className="flex-1"
+                className="flex-1 bg-orange-500 hover:bg-orange-600"
               >
                 <Mail className="h-4 w-4 mr-2" />
                 Email Inquiry

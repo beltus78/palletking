@@ -103,13 +103,7 @@ const Footer = () => {
               </p>
               <div className="space-y-3">
                 <p className="text-gray-300">
-                  <strong className="text-white">Phone:</strong> +1(541)-515-7780
-                </p>
-                <p className="text-gray-300">
-                  <strong className="text-white">Whatsapp:</strong> +1(541)-515-7780
-                </p>
-                <p className="text-gray-300">
-                  <strong className="text-white">Email:</strong> info@mypalletliquidationcenter.com
+                  <strong className="text-white">Email:</strong> palletkingmj01@gmail.com
                 </p>
               </div>
               

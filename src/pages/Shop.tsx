@@ -508,7 +508,7 @@ const Shop = () => {
   const handleEmailInquiry = (product: Product) => {
     const subject = `Product Inquiry - ${product.name}`;
     const body = `Hi, I'm interested in the following product:%0D%0A%0D%0AProduct: ${product.name}%0D%0APrice: $${product.salePrice.toLocaleString()}.00%0D%0ADescription: ${product.description}%0D%0A%0D%0APlease provide more information about availability and shipping details.%0D%0A%0D%0AThank you!`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     window.location.href = mailtoLink;
     

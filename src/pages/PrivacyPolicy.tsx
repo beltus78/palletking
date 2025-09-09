@@ -263,8 +263,7 @@ const PrivacyPolicy = () => {
                   please contact us:
                 </p>
                 <div className="space-y-2 text-muted-foreground">
-                  <p><strong>Email:</strong> privacy@palletsliquidationcenter.com</p>
-                  <p><strong>Phone:</strong> +1(541)-515-7780</p>
+                  <p><strong>Email:</strong> palletkingmj01@gmail.com</p>
                   <p><strong>Address:</strong> Pallets Liquidation Center, Florida, USA</p>
                 </div>
               </CardContent>

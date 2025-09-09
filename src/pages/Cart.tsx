@@ -39,7 +39,7 @@ const Cart = () => {
     ).join('%0D%0A');
     const totalPrice = getTotalPrice().toFixed(2);
     const body = `Hi, I would like to place an order for the following items:%0D%0A%0D%0A${itemsList}%0D%0A%0D%0ATotal: $${totalPrice}%0D%0A%0D%0APlease provide payment and shipping information.%0D%0A%0D%0AThank you!`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     window.location.href = mailtoLink;
     

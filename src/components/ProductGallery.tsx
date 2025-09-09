@@ -56,7 +56,7 @@ const ProductGallery = ({ product }: ProductGalleryProps) => {
     const variation = selectedVariation ? ` (${selectedVariation.size || selectedVariation.color})` : '';
     const subject = `Inquiry about ${product.name}${variation}`;
     const body = `Hi, I'm interested in the ${product.name}${variation} priced at $${selectedVariation?.price || product.currentPrice}.%0D%0A%0D%0APlease provide more information about:%0D%0A- Availability%0D%0A- Shipping options%0D%0A- Bulk pricing%0D%0A%0D%0AThank you!`;
-    const mailtoLink = `mailto:info@mypalletliquidationcenter.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const mailtoLink = `mailto:palletkingmj01@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     
     window.location.href = mailtoLink;
     
@@ -242,7 +242,7 @@ const ProductGallery = ({ product }: ProductGalleryProps) => {
             )}
 
             {/* Action Buttons */}
-            <div className="flex gap-3 pt-4">
+            <div className="flex flex-col sm:flex-row gap-3 pt-4">
               <Button 
                 onClick={addToWishlist}
                 variant="outline" 
@@ -253,7 +253,7 @@ const ProductGallery = ({ product }: ProductGalleryProps) => {
               </Button>
               <Button 
                 onClick={sendProductInquiry}
-                className="flex-1"
+                className="flex-1 bg-orange-500 hover:bg-orange-600"
               >
                 <Mail className="h-4 w-4 mr-2" />
                 Email Inquiry
